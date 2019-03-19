@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124581164-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124581164-1', {
+      'page_title': '404',
+    });
+  </script>
+  <!--  Open Graph properties for sharing links  -->
+  <meta property="og:site_name" content="wolff.sh">
+  <meta charset="utf-8">
+  <meta property="og:url" content="https://wolff.sh">
+  <meta property="og:title" content="$ ./wolff.sh">
+  <meta property="og:description" content="Personal site of a computer science and genetics college student">
+  <meta property="og:image" content="img/intro-bg.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Matthew Wolff's Personal Website">
+  <meta name="description" content="Personal site of a computer science and genetics college student">
+
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css" />
+  <link href="external/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="external/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/mw.css" />
+
+  <title>$ ./matthew_wolff</title>
+  <!--  For Google indexing  -->
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Matthew Wolff",
+        "jobTitle": "Data Scientist",
+        "url": "https://wolff.sh/",
+        "sameAs": [
+            "https://github.com/matthewwolff",
+            "https://linkedin.com/in/thematthewwolff",
+            "https://instagram.com/matthewwolff"
+        ],
+        "image": "https://wolff.sh/img/favicon.ico"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://wolff.sh/",
+        "name": "Matthew Wolff",
+        "image": "https://wolff.sh/img/favicon.ico",
+        "author": {
+            "@type": "Person",
+            "name": "Matthew Wolff"
+        }
+    }
+  </script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> Menu <i class="fa fa-bars"></i></button>
+      </div>
+      <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+        <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-home"></i> <span class="light"> HOME </span></a>
+        <a class="navbar-brand page-scroll" target="blank" href="https://github.com/matthewwolff"><i class="fa fa-desktop"></i> <span class="light"> Projects </span></a>
+        <a class="navbar-brand page-scroll" href="resume" target="blank"><i class="fa fa-address-card"></i> <span class="light"> Résumé </span></a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> &nbsp;&nbsp;About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a data-target="#carousel" data-slide-to="0" onclick="jump('#about')"> Education </a></li>
+              <li><a data-target="#carousel" data-slide-to="1" onclick="jump('#about')"> Technical Skills</a></li>
+              <li><a data-target="#carousel" data-slide-to="2" onclick="jump('#about')"> Personal </a></li>
+              <!-- <li><a data-target="#carousel" data-slide-to="3" onclick="jump('#about')"> Research </a></li> -->
+            </ul>
+          </li>
+          <li><a onclick="jump(to='#contact')"> &nbsp;&nbsp;Contact </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="intro">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="error-heading"> Quoth the Raven: 404 </h2>
+            <p  align="left" style='padding-left: 15%'> 
+            Once upon a midnight dreary, <br/> 
+            while I pondered weak and weary, <br/>
+            Once upon a midnight dreary, while I pondered, weak and weary, <br/> 
+			Over many a quaint and curious volume of forgotten lore— <br/> 
+    		While I nodded, nearly napping, suddenly there came a tapping, <br/> 
+			As of some one gently rapping, rapping at my chamber door. <br/> 
+			“’Tis some visitor,” I muttered, “tapping at my chamber door— <br/> 
+            Only this and nothing more.”
+        	</p><p class="intro-text" align="left" style="padding-left: 15%"><i> Page Not Found — 404 </i> </p>
+        	<img src="/img/raven.png" alt="a raven" height="100">
+            <!--<a onclick="jump('#about')" class="btn btn-circle"><i class="fa fa-angle-double-down animated"></i></a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="contact" class="container content-section text-center">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2> Contact </h2>
+        <h5><a href="mailto:matthew.wolff@wisc.edu" class="white text-center"> matthew.wolff@wisc.edu </a></h5>
+        <ul class="list-inline banner-social-buttons">
+          <li><a href="https://github.com/matthewwolff" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw fa-col"></i> <span class="network-name"> Github </span></a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/thematthewwolff" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw fa-col"></i> <span class="network-name"> LinkedIn </span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container text-center">
+      <h5> Copyright &copy; Matthew Wolff 2019 </h5>
+    </div>
+  </section>
+  <script src="external/jquery/jquery.min.js"></script>
+  <script src="external/bootstrap/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="js/mw.js"></script> 
+</body>
+<!-- extra spacing for vertically centered contact info -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</html>

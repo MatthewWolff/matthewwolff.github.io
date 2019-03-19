@@ -363,7 +363,7 @@ a:focus {
       vertical-align: middle;
 }
 
-.intro .intro-body .brand-heading {
+.intro .intro-body .brand-heading .error-heading {
       font-weight: lighter;
       font-family: Century Gothic, sans-serif;
       font-size: 40px;
@@ -381,6 +381,9 @@ a:focus {
       }
       .intro .intro-body .brand-heading {
             font-size: 100px;
+      }
+      .error-heading {
+            font-size: 60px;
       }
       .intro .intro-body .intro-text {
             font-size: 26px;
