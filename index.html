@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124581164-1"></script>
     <script>
@@ -15,177 +14,209 @@
         gtag('js', new Date());
         gtag('config', 'homepage');
     </script>
-  <!--  Open Graph properties for sharing links  -->
-  <meta property="og:site_name" content="wolff.sh">
-  <meta charset="utf-8">
-  <meta property="og:url" content="https://wolff.sh">
-  <meta property="og:title" content="$ ./wolff.sh">
-  <meta property="og:description" content="Personal site of a dev">
-  <meta property="og:image" content="/img/intro-bg.jpg">
-  <meta property="og:image:type" content="image/jpg">
-  <meta property="og:image:width" content="1920">
-  <meta property="og:image:height" content="1080">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="title" content="Matthew Wolff's Personal Website">
-  <meta name="description" content="Personal site of dev">
+    <!--  Open Graph properties for sharing links  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Wolff Den">
+    <meta name="description" content="Personal website of a lazy dev">
+    <meta property="og:site_name" content="wolff.sh">
+    <meta property="og:url" content="https://wolff.sh">
+    <meta property="og:title" content="$ ./wolff.sh">
+    <meta property="og:description" content="Personal website of a lazy dev">
+    <meta property="og:image" content="/img/intro-bg.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
 
-  <link rel="icon" href="/img/favicon.ico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css" />
-  <link href="/external/bootstrap/css/bootstrap.css" rel="stylesheet" />
-  <link href="/external/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/css/mw.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+    <link rel="manifest" href="/favicon/site.webmanifest"/>
 
-  <title>$ ./matthew_wolff</title>
-  <!--  For Google indexing  -->
-  <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Matthew Wolff",
-        "jobTitle": "Machine Learning Engineer",
-        "url": "https://wolff.sh/",
-        "sameAs": [
-            "https://github.com/matthewwolff",
-            "https://linkedin.com/in/thematthewwolff",
-            "https://instagram.com/matthewwolff"
-        ],
-        "image": "https://wolff.sh/img/favicon.ico"
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "url": "https://wolff.sh/",
-        "name": "Matthew Wolff",
-        "image": "https://wolff.sh/img/favicon.ico",
-        "author": {
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+          type="text/css"/>
+    <link href="/external/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/mw.css"/>
+
+    <!-- icons -->
+    <link href="/external/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+
+    <title>$ ./matthew_wolff</title>
+    <!--  For Google indexing  -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Matthew Wolff"
+            "name": "Matthew Wolff",
+            "jobTitle": "Machine Learning Engineer",
+            "url": "https://wolff.sh/",
+            "sameAs": [
+                "https://github.com/matthewwolff",
+                "https://linkedin.com/in/thematthewwolff",
+                "https://instagram.com/matthewwolff"
+            ],
+            "image": "https://wolff.sh/img/favicon.ico"
         }
-    }
-  </script>
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://wolff.sh/",
+            "name": "Matthew Wolff",
+            "image": "https://wolff.sh/img/favicon.ico",
+            "author": {
+                "@type": "Person",
+                "name": "Matthew Wolff"
+            }
+        }
+    </script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> Menu <i class="fa fa-bars"></i></button>
-      </div>
-      <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
-        <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-home"></i> <span class="light"> HOME </span></a>
-        <a class="navbar-brand page-scroll" target="blank" href="https://github.com/matthewwolff"><i class="fa fa-desktop"></i> <span class="light"> Projects </span></a>
-        <a class="navbar-brand page-scroll" href="resume" target="blank"><i class="fa fa-address-card"></i> <span class="light"> Résumé </span></a>
-      </div>
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> &nbsp;&nbsp;About <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a data-target="#carousel" data-slide-to="0" onclick="jump('#about')"> Education </a></li>
-              <li><a data-target="#carousel" data-slide-to="1" onclick="jump('#about')"> Technical Skills</a></li>
-              <li><a data-target="#carousel" data-slide-to="2" onclick="jump('#about')"> Personal </a></li>
-              <!-- <li><a data-target="#carousel" data-slide-to="3" onclick="jump('#about')"> Research </a></li> -->
-            </ul>
-          </li>
-          <li><a onclick="jump(to='#contact')"> &nbsp;&nbsp;Contact </a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <header class="intro">
-    <div class="intro-body">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="brand-heading"> Matthew Wolff </h2>
-            <p class="intro-text"> Data Scientist, Developer, Geneticist </p>
-            <a onclick="jump('#about')" class="btn btn-circle"><i class="fa fa-angle-double-down animated"></i></a>
-          </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> Menu
+                <i class="fa fa-bars"></i></button>
         </div>
-      </div>
+        <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+            <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-home"></i> <span
+                    class="light"> HOME </span></a>
+            <a class="navbar-brand page-scroll" target="blank" href="https://github.com/matthewwolff"><i
+                    class="fa fa-desktop"></i> <span class="light"> Projects </span></a>
+            <a class="navbar-brand page-scroll" href="resume" target="blank"><i class="fa fa-address-card"></i> <span
+                    class="light"> Résumé </span></a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"> &nbsp;&nbsp;About <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a data-target="#carousel" data-slide-to="0" onclick="jump('#about')"> Experience </a></li>
+                        <li><a data-target="#carousel" data-slide-to="1" onclick="jump('#about')"> Technical Skills</a>
+                        </li>
+                        <li><a data-target="#carousel" data-slide-to="2" onclick="jump('#about')"> Personal </a></li>
+                        <!-- <li><a data-target="#carousel" data-slide-to="3" onclick="jump('#about')"> Research </a></li> -->
+                    </ul>
+                </li>
+                <li><a onclick="jump(to='#contact')"> &nbsp;&nbsp;Contact </a></li>
+            </ul>
+        </div>
     </div>
-  </header>
-  <section class="container content-section about">
+</nav>
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="brand-heading"> Matthew Wolff </h2>
+                    <p class="intro-text"> Machine Learning Engineer, Data Scientist, Genetics Nerd </p>
+                    <a onclick="jump('#about')" class="btn btn-circle"><i class="fa fa-angle-double-down animated"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="container content-section about">
     <!-- Carousel -->
     <div id="about" class="container content-section">
-      <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
-        <div class="row">
-          <p id="ssh" class="console-navbar console-navbar-short"> ssh -i ~/.ssh/id_rsa anon@WOLFF.SH </p>
-        </div>
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel" data-slide-to="0" class="active indicator-hover"></li>
-          <li data-target="#carousel" data-slide-to="1" class="indicator-hover"></li>
-          <li data-target="#carousel" data-slide-to="2" class="indicator-hover"></li>
-          <!-- <li data-target="#carousel" data-slide-to="3" class="indicator-hover"></li> -->
-        </ol>
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="row">
+                <p id="ssh" class="console-navbar console-navbar-short"> ssh -i ~/.ssh/id_rsa anon@WOLFF.SH </p>
+            </div>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active indicator-hover"></li>
+                <li data-target="#carousel" data-slide-to="1" class="indicator-hover"></li>
+                <li data-target="#carousel" data-slide-to="2" class="indicator-hover"></li>
+                <!-- <li data-target="#carousel" data-slide-to="3" class="indicator-hover"></li> -->
+            </ol>
 
-        <!-- Inner -->
-        <div class="carousel-inner console-background">
-          <!-- Controls -->
-          <a class="left carousel-controls" href="#carousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-controls" href="#carousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
+            <!-- Inner -->
+            <div class="carousel-inner console-background">
+                <!-- Controls -->
+                <a class="left carousel-controls" href="#carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-controls" href="#carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
 
-          <!-- Academics -->
-          <div class="item full-width active">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="row">
-                  <p class="console-navbar prompt">
-                    ┌─<font color="gray">[</font><font color="CACDFF">~/education</font><font color="gray">]</font>─<font color="gray">[</font><font color="white">anon@wolff.sh</font><font color="gray">]</font>
-                    <font color="red">(ssh) </font><font color="gold">(git master)</font>
-                    <br/> │
-                    <br/> └─<font color="gray">$</font> bash -x academics.sh </p>
-                </div>
-                <div class="row">
-                  <div class="col-lg-12 col-lg-offset-1 consola">
-                    <div class="container console-text">
-                      <p> +
-                        <a href="resume" target="blank">
-                          <u>./resume.py</u> <font color="grey"># check out my credentials! </font>
-                        </a>
-                      </p>
+                <!-- Academics -->
+                <div class="item full-width active">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <p class="console-navbar prompt">
+                                    ┌─<span style="color: gray; ">[</span><span
+                                        style="color: #CACDFF; ">~/experience</span><span
+                                        style="color: gray; ">]</span>─<span style="color: gray; ">[</span><span
+                                        style="color: white; ">anon@wolff.sh</span><span
+                                        style="color: gray; ">]</span>
+                                    <span style="color: red; ">(ssh) </span><span
+                                        style="color: gold; ">(git master)</span>
+                                    <br/> │
+                                    <br/> └─<span style="color: gray; ">$</span> bash -x academics.sh </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-lg-offset-1 consola">
+                                    <div class="container console-text">
+                                        <p> +
+                                            <a href="resume" target="blank">
+                                                <u>./resume.py</u> <span style="color: grey; "># check out my
+                                                credentials! </span>
+                                            </a>
+                                        </p>
 
-                      <p> +
-                        <a href="http://github.com/matthewwolff/" target="blank">
-                          <u>./github.r</u> <font color="grey"># and my projects </font>
-                        </a>
-                      </p>
+                                        <p> +
+                                            <a href="https://github.com/matthewwolff/" target="blank">
+                                                <u>./github.r</u> <span style="color: grey; "># and my projects </span>
+                                            </a>
+                                        </p>
+                                        <p> + head <u>*.work</u> <span class="tab">
+                      						  ==> Amazon, Inc. 2021-Present.work <== <br/>
+                                              2025–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Machine Learning Engineer II, Ad Response Prediction <br/>
+                                              2021–2024&nbsp;&nbsp;Software Engineer I, Amazon Fashion <br/>
+                                              </span>
+                                        </p>
 
-                      <p> + cd <u>degrees/</u> && tree 
-                        <br/><span class="tab" style="line-height: 0.75">
+                                        <p> + cd <u>degrees/</u> && tree
+                                            <br/><span class="tab" style="line-height: 0.75">
                                               . <br/><br/>
-                                              ├── <font color="#5ffdff">Bachelor of Science</font><br/>
+                                              ├── <span style="color: #5ffdff; ">Bachelor of Science</span><br/>
                                               │<br/>
-                                              │   ├── <font color="#c91b00">Computer_Sciences.major</font><br/>
+                                              │   ├── <span style="color: #c91b00; ">Computer_Sciences.major</span><br/>
                                               │   │<br/>
-                                              │   ├── <font color="#c91b00">Genetics_and_Genomics.major</font><br/>
+                                              │   ├── <span
+                                                    style="color: #c91b00; ">Genetics_and_Genomics.major</span><br/>
                                               │   │<br/>
-                                              │   └── <font color="#c91b00">Mathematics.minor</font><br/> 
+                                              │   └── <span style="color: #c91b00; ">Mathematics.minor</span><br/>
                                               │<br/>
-                                              └── <font color="#5ffdff">Master of Science</font> <br/><br/>
-                                                  └── <font color="#c91b00">Computational_Biology.cmu</font><br/><br/>
+                                              └── <span style="color: #5ffdff; ">Master of Science</span> <br/><br/>
+                                                  └── <span
+                                                    style="color: #c91b00; ">Computational_Biology.cmu</span><br/><br/>
                                               2 directories, 4 files</span>
-                      </p>
-
-                      <p> + head <u>../*.bib</u> <span class="tab">
+                                        </p>
+                                        <p> + head <u>../*.bib</u> <span class="tab">
                       						  ==> Carnegie Mellon University 2019-2021.bib <== <br/>
                                               Second-year graduate student <br/> 
-                                              Teaching Assistant [<a href="https://www.cs.cmu.edu/~ckingsf/class/15351-f15/" target="blank">Adv. Data Structures</a>,
-                                                <a href="http://compeau.cbd.cmu.edu/wp-content/uploads/2018/01/syllabus_601.pdf">
+                                              Teaching Assistant [<a
+                                                href="https://www.cs.cmu.edu/~ckingsf/class/15351-f15/" target="blank">Adv. Data Structures</a>,
+                                                <a href="https://compeau.cbd.cmu.edu/wp-content/uploads/2018/01/syllabus_601.pdf">
                                                   Programming for Scientists</a>]
                                               <br/>
-                                              Researcher (Evolution of Cancer -- <a href="https://labs.bio.cmu.edu/schwartz/", target="blank">
+                                              Researcher (Evolution of Cancer -- <a
+                                                href="https://labs.bio.cmu.edu/schwartz/" , target="blank">
                                                 Schwartz Lab</a>)
                                               <br/>
-                                              <a href="https://cmu-dsc.github.io/" target="blank">CMU Data Science Club</a><br/>
+                                              <a href="https://cmu-dsc.github.io/"
+                                                 target="blank">CMU Data Science Club</a><br/>
                                               STEM Ambassador -- <a href="https://www.cmu.edu/gelfand/" target="blank">Leonard Gelfand Center</a><br/>
                                               Tutor, Computer Sciences<br/>
                                               GRE: 334/340 <br/>
@@ -194,7 +225,7 @@
 
                                     ==> University of Wisconsin 2015-2019.bib <== <br/>
                                     Founder/President, 
-                                    <a href="http://dotdatascience.org" target="blank"> 
+                                    <a href="https://dotdatascience.org" target="blank">
                                       Data Science Club 
                                     </a> <br/>
 
@@ -203,7 +234,7 @@
                                     </a> <br/>
 
                                     Competitive Programmer, 
-                                    <a href="http://pages.cs.wisc.edu/~dieter/ICPC/hall-of-fame.html" target="blank">
+                                    <a href="https://pages.cs.wisc.edu/~dieter/ICPC/hall-of-fame.html" target="blank">
                                       ICPC team
                                     </a> <br/> 
 
@@ -225,10 +256,10 @@
                                     Eagle Award (Boy Scouts of America) - 6 palms<br/>
                                     12 AP Courses (AP Scholar with Distinction)<br/>
                                     National Merit Finalist – 2240/2400 SAT; 36/36 ACT</span>
-                      </p>
+                                        </p>
 
-                      <p> + ls -1Gr <u>../coursework/grad</u><span class="tab">
-                        <font color="#5ffdff">
+                                        <p> + ls -1Gr <u>../coursework/grad</u><span class="tab">
+                        <span style="color: #5ffdff; ">
                                               15-637 Foundations of Computational Data Science (Python, Java)<br/>
                                               02-601 Machine Learning for Scientists (Python, MATLAB)<br/>
                                               10-605 Machine Learning with Large Datasets<br/>
@@ -237,11 +268,11 @@
                                               02-613 Advanced Data Structures & Algorithms <br/>
                                               15-686 Neural Computation (MATLAB) <br/>
                                               02-718 Computational Medicine (Python) <br/>
-                        </font></span>
-                      </p>
+                        </span></span>
+                                        </p>
 
-                      <p> + ls -1Gr <u>../coursework/undergrad</u><span class="tab">
-                        <font color="#5ffdff">
+                                        <p> + ls -1Gr <u>../coursework/undergrad</u><span class="tab">
+                        <span style="color: #5ffdff; ">
                                               CS 639 Data Management for Data Scientists (Python, SQL)<br/>
                                               CS 577 Algorithms <br/>
                                               CS 576 Bioinformatics (Python) <br/>
@@ -250,181 +281,217 @@
                                               CS 537 Operating Systems (C) <br/>
                                               CS 367 Data Structures (Java) <br/>
                                               CS 354 Machine Organization & Programming (C) <br/> 
-                        </font></span>
-                      </p>
+                        </span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Technical -->
-          <div class="item full-width">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="row">
-                  <p class="console-navbar prompt">
-                    ┌─<font color="gray">[</font><font color="CACDFF">~/technical</font><font color="gray">]</font>─<font color="gray">[</font><font color="white">anon@wolff.sh</font><font color="gray">]</font>
-                    <font color="red">(ssh) </font><font color="gold">(git master)</font>
-                    <br/> │
-                    <br/> └─<font color="gray">$</font> echo <font color="gold"> "I can has technical prowess?"</font> </p>
-                </div>
-                <div class="row">
-                  <div class="col-lg-12 col-lg-offset-1 consola">
-                    <div class="container console-text">
-                      <p> <font color="grey"> $</font> ls -1Gp <u>projects/</u> <span class="tab">
-                        <a href="https://github.com/MatthewWolff/DuolingoAnalysis"> Duolingo Analysis/</a><br/> 
-                        <a href="https://github.com/MatthewWolff/AniClustering"> Anime Recommender System/</a><br/> 
-                        <a href="https://github.com/matthewwolff/TwitterScraper"> Twitter Scraper (21 stars)/</a><br/> 
-                        <a href="https://github.com/matthewwolff/pokenet"> Pokémon Neural Network/</a><br/> 
-                        <a href="https://github.com/matthewwolff/MarkovTweets"> Markov-Chaining Twitter Bot/</a><br/>
-                        <a href="https://github.com/matthewwolff/NLP_genomics"> Natural Language Processing with Genomics/</a><br/> 
-                        <a href="https://github.com/matthewwolff/theDNABot"> Twitter DNA Bot/</a><br/> 
-                        <a href="https://github.com/matthewwolff/IsItFiller"> Is It Filler?/</a><br/> 
+                <!-- Technical -->
+                <div class="item full-width">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <p class="console-navbar prompt">
+                                    ┌─<span style="color: gray; ">[</span><span
+                                        style="color: #CACDFF; ">~/technical</span><span
+                                        style="color: gray; ">]</span>─<span style="color: gray; ">[</span><span
+                                        style="color: white; ">anon@wolff.sh</span><span
+                                        style="color: gray; ">]</span>
+                                    <span style="color: red; ">(ssh) </span><span
+                                        style="color: gold; ">(git master)</span>
+                                    <br/> │
+                                    <br/> └─<span style="color: gray; ">$</span> brew install --cask matthew-wolff <span
+                                        style="color: gold; "></span></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-lg-offset-1 consola">
+                                    <div class="container console-text">
+                                        <p><span style="color: grey; "> $</span> ls -1Gp <u>projects/</u> <span
+                                                class="tab">
+                                            <a href="https://github.com/matthewwolff/TwitterScraper"> Twitter Scraper (160 stars)/</a><br/>
+                                            <a href="https://github.com/MatthewWolff/SIFFCalendarScraper"> SIFF Calendar Scraper/</a><br/>
+                                            <a href="https://github.com/MatthewWolff/DuolingoAnalysis"> Duolingo Analysis/</a><br/>
+                                            <a href="https://github.com/MatthewWolff/AniClustering"> Anime Recommender System/</a><br/>
+                                            <a href="https://github.com/matthewwolff/pokenet"> Pokémon Neural Network/</a><br/>
+                                            <a href="https://github.com/matthewwolff/MarkovTweets"> Markov-Chaining Twitter Bot/</a><br/>
+                                            <!--                        <a href="https://github.com/matthewwolff/NLP_genomics"> Natural Language Processing with Genomics/</a><br/> -->
+                                            <!--                        <a href="https://github.com/matthewwolff/theDNABot"> Twitter DNA Bot/</a><br/> -->
+                                            <!--                        <a href="https://github.com/matthewwolff/IsItFiller"> Is It Filler?/</a><br/> -->
                       </span>
-                      </p>
-                        <p> <font color="grey"> $</font> ls <u>languages/</u> <span class="tab">
-                          <font color="#c91b00"> 
-                          Python &nbsp;&nbsp; SQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scala </font><br/>
-                          <font color="#c91b00"> 
-                          R &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shell (BASH) &nbsp; Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LaTeX </font><br/>
+                                        </p>
+                                        <p><span style="color: grey; "> $</span> ls <u>languages/</u> <span class="tab">
+                          <span style="color: #c91b00; ">
+                          Python &nbsp;&nbsp; SQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scala </span><br/>
+                          <span style="color: #c91b00; ">
+                          R &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shell (BASH) &nbsp; Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LaTeX </span><br/>
                         </span>
-                        </p>
+                                        </p>
 
-                        <p> <font color="grey"> $</font> cd <u>experience/</u> && ls -RpG <span class="tab">
-                        <font color="#5ffdff"> internships</font>/ &nbsp;&nbsp;&nbsp; <font color="#5ffdff"> research</font>/ <br/><br/>
+                                        <p><span style="color: grey; "> $</span> cd <u>experience/</u> && ls -RpG <span
+                                                class="tab">
+                        <span style="color: #5ffdff; "> internships</span>/ &nbsp;&nbsp;&nbsp; <span
+                                                style="color: #5ffdff; "> research</span>/ <br/><br/>
 
                         ./internships:<br/>
-                        <font color="#5ffdff"> West&nbsp;Bend&nbsp;Mutual&nbsp;Insurance</font>/ &nbsp;&nbsp;&nbsp;&nbsp; <font color="#5ffdff"> Arity&nbsp;(an&nbsp;AllState&nbsp;company)</font>/ &nbsp;&nbsp;&nbsp;&nbsp; <font color="#5ffdff"> Capital&nbsp;One</font>/ <br/><br/>
+                        <span style="color: #5ffdff; "> West&nbsp;Bend&nbsp;Mutual&nbsp;Insurance</span>/ &nbsp;&nbsp;&nbsp;&nbsp; <span
+                                                style="color: #5ffdff; "> Arity&nbsp;(an&nbsp;AllState&nbsp;company)</span>/ &nbsp;&nbsp;&nbsp;&nbsp; <span
+                                                style="color: #5ffdff; "> Capital&nbsp;One</span>/ <br/><br/>
 
                         ./internships/West Bend Mutual Insurance:<br/>
-                        <font color="#c91b00"> Software Engineer.intern </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2017<br/><br/>
+                        <span style="color: #c91b00; "> Software Engineer.intern </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2017<br/><br/>
                         
                         ./internships/Arity (an AllState company):<br/>
-                        <font color="#c91b00"> Data Analyst Engineer.intern </font>&nbsp;&nbsp;&nbsp;&nbsp; Summer2018<br/><br/>
+                        <span style="color: #c91b00; "> Data Analyst Engineer.intern </span>&nbsp;&nbsp;&nbsp;&nbsp; Summer2018<br/><br/>
 
                         ./internships/Capital One:<br/>
-                        <font color="#c91b00"> Data Engineer.intern </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2019<br/><br/>
+                        <span style="color: #c91b00; "> Data Engineer.intern </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2019<br/><br/>
 
                         ./internships/Amazon:<br/>
-                        <font color="#c91b00"> Software Engineer.intern </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2020<br/><br/>
+                        <span style="color: #c91b00; "> Software Engineer.intern </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2020<br/><br/>
 
                         ./research:<br/>
-                        <font color="#c91b00"> 
-                        Engelman.lab</font>&nbsp;&nbsp;&nbsp;&nbsp; 2015-2017 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alzheimer's&nbsp;Disease &nbsp;&nbsp;&nbsp;&nbsp; Machine&nbsp;Learning <br/> 
+                        <span style="color: #c91b00; ">
+                        Engelman.lab</span>&nbsp;&nbsp;&nbsp;&nbsp; 2015-2017 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alzheimer's&nbsp;Disease &nbsp;&nbsp;&nbsp;&nbsp; Machine&nbsp;Learning <br/>
 
-                        <font color="#c91b00"> 
-                        Payseur.lab</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mice&nbsp;Genetics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Automated&nbsp;Image&nbsp;Processing <br/> 
+                        <span style="color: #c91b00; ">
+                        Payseur.lab</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mice&nbsp;Genetics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Automated&nbsp;Image&nbsp;Processing <br/>
 
-                        <font color="#c91b00"> 
-                        Ong.lab</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2017 &nbsp;&nbsp;&nbsp;&nbsp; Cancer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data&nbsp;Visualization <br/>
+                        <span style="color: #c91b00; ">
+                        Ong.lab</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Summer2017 &nbsp;&nbsp;&nbsp;&nbsp; Cancer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data&nbsp;Visualization <br/>
 
-                        <font color="#c91b00"> 
-                        McMahon.lab</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018-2019 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Metagenomics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Big&nbsp;Data <br/>
+                        <span style="color: #c91b00; ">
+                        McMahon.lab</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018-2019 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Metagenomics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Big&nbsp;Data <br/>
 
-                        <font color="#c91b00"> 
-                        Schwartz.lab</font>&nbsp;&nbsp;&nbsp;&nbsp; 2020 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancer Modeling &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Linear&nbsp;Programming <br/>
+                        <span style="color: #c91b00; ">
+                        Schwartz.lab</span>&nbsp;&nbsp;&nbsp;&nbsp; 2020 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancer Modeling &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Linear&nbsp;Programming <br/>
                         <br/>
                         </span>
-                        </p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Personal -->
-          <div class="item full-width">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="row">
-                  <p class="console-navbar prompt">
-                    ┌─<font color="gray">[</font><font color="CACDFF">~/personal</font><font color="gray">]</font>─<font color="gray">[</font><font color="white">anon@wolff.sh</font><font color="gray">]</font>
-                    <font color="red">(ssh) </font><font color="gold">(git master)</font>
-                    <br/> │
-                    <br/> └─<font color="gray">$</font> cat <<< <font color=gold>"hire me"</font> | mail -s <font color="gold">"pls"</font> $YOU</p>
-                </div>
-                <div class="row">
-                  <div class="col-lg-12 col-lg-offset-1 consola">
-                    <div class="container console-text">
-                      <p> <font color="grey"> $</font> perl -pe "s/\t/: /g" <u>about_me.tsv</u>
-                        <span class="tab">
+                <!-- Personal -->
+                <div class="item full-width">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <p class="console-navbar prompt">
+                                    ┌─<span style="color: gray; ">[</span><span
+                                        style="color: #CACDFF; ">~/personal</span><span
+                                        style="color: gray; ">]</span>─<span style="color: gray; ">[</span><span
+                                        style="color: white; ">anon@wolff.sh</span><span
+                                        style="color: gray; ">]</span>
+                                    <span style="color: red; ">(ssh) </span><span
+                                        style="color: gold; ">(git master)</span>
+                                    <br/> │
+                                    <br/> └─<span style="color: gray; ">$</span> cat <<< <span style="color: gold; ">"hire me"</span>
+                                    | mail
+                                    -s <span style="color: gold; ">"pls"</span> $YOU</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-lg-offset-1 consola">
+                                    <div class="container console-text">
+                                        <p><span style="color: grey; "> $</span> perl -pe "s/\t/: /g"
+                                            <u>about_me.tsv</u>
+                                            <span class="tab">
                                   Home state: Wisconsin <br/>
-                                  Age: 24 <br/>
-                                  Cats: 3<br/>
+                                  Born: 1996 <br/>
+                                  Cats: 2<br/>
                                   Hobbies: Lifting, bouldering, unnecessary automation, Overwatch</span>
-                        <!-- no one's going to read this -->
-                        <p> <font color="grey"> $</font> history <span class="tab">
-                              In 2015 I began attending the University of Wisconsin, the shared alma mater of both my parents. In the first month, I became involved in a computational epidemiology lab that focused on <a target="_blank" href="https://pophealth.wisc.edu/corinne-engelman"> Alzheimer's research</a>. Much of my work revolved around the application of machine learning (ML) methods to human data. I worked with Random Forests to characterize gene-gene and gene-environment interactions with the goal of identifying predictors for Alzheimer's. Next, I worked on a project where I reduced the dimensionality of metabolomic data before the application of clustering methods and other analyses by the lab. Under the direction of Dr. Engleman, I presented my work with metabolomics and RandomForests at the 2016 Undergraduate Research Symposium.<br/><br/>
-                              After my mentor entered her doctoral year, I transitioned to a <a target="_blank" href="https://payseur.genetics.wisc.edu/">genetics lab</a> where I spent a semester designing and implementing <a target="_blank" href="http://github.com/MatthewWolff/image_Analysis">a program</a> to process microscope slides of mice chromosomes. I chose MATLAB for its image analysis libraries. The program was able to deconstruct the images and distinguish overlapping chromosomes, with light supervision.<br/><br/>
-                              I worked for Summer 2017 as a Software Developer at <a target="_blank" href="http://www.thesilverlining.com/">West Bend Mutual Insurance</a>, where I authored programs in C#, R, and VBA to manipulate excel spreadsheets and compose SQL queries to build a MySQL Database. It was here that I also gained a lot of experience in Javascript, CSS/HTML, and Angular.js, working with the Senior Business Analyst to tailor internal webpages for company use.During my free time I taught myself Python and Scala, gamed, and rock climbed.
+                                            <!-- no one's going to read this -->
+                                        <p><span style="color: grey; "> $</span> history <span class="tab">
+                              In 2015 I began attending the University of Wisconsin, the shared alma mater of both my parents. In the first month, I became involved in a computational epidemiology lab that focused on <a
+                                                target="_blank"
+                                                href="https://pophealth.wisc.edu/staff/engelman-corinne/"> Alzheimer's research</a>. Much of my work revolved around the application of machine learning (ML) methods to human data. I worked with Random Forests to characterize gene-gene and gene-environment interactions with the goal of identifying predictors for Alzheimer's. I then worked with metabolomic data, implementing dimensionality reduction and clustering techniques. Under the direction of Dr. Engelman, I presented my work with metabolomics and RandomForests at the 2016 Undergraduate Research Symposium.<br/><br/>
+                              I then spent a semester working with a PhD student in a <a target="_blank"
+                                                                                         href="https://payseur.genetics.wisc.edu/">genetics lab</a> where I wrote <a
+                                                target="_blank" href="https://github.com/MatthewWolff/image_Analysis">software</a> to do semi-supervised image processing & annotation of mouse chromosomal data. Interning in Summer 2017 as a Software Developer at <a
+                                                target="_blank"
+                                                href="https://www.thesilverlining.com/">West Bend Mutual Insurance</a>, I wrote data processing programs in C#, R, and VBA to manipulate some delightful legacy "databases" (Excel spreadsheets) and port them into a MySQL database. I had to touch on some front-end development and taught myself Python on the side.
                               <br/><br/>
-                              Taking a break from research for a semester to focus on my grades, I discovered a passion for <a target="_blank" href="http://pages.cs.wisc.edu/~dieter/ICPC/hall-of-fame.html">competitive programming</a> and <a target="_blank" href="https://devpost.com/MatthewWolff">hackathons</a>, traveling as far as Massachusetts after getting admitted to HackMIT. It was during this semester that I took Operating Systems and Artificial Intelligence and began transitioning from a prospective career in bioinformatics software to Data Science. I sought out relevant research for the follow semester and was offered a long-term position in a<a target="_blank" href="https://mcmahonlab.wisc.edu/"> bacteriology </a> <a target="_blank" href="https://mcmahonlab.wisc.edu/">research lab</a>, where I use Python, R, and extensive shell scripting to maintain a data pipeline for hundreds of gigabytes of metagenomic data. For summer 2018 I worked as a Data Analyst Engineering Intern for <a target="_blank" href="https://www.arity.com/">Arity</a>, the predictive analytics brainchild of <a target="_blank" href="https://www.allstate.com/">AllState</a>. I built from scratch a Scala pipeline that would ingest millions of records of trip data on a daily basis and generate a report to monitor the incoming batch of data. The report was generated using Rmarkdown and the Tidyverse package, and the overall pipeline was wrapped in BASH.<br/><br/>
-                              In the middle of my junior year, I founded UW Madison's Data Science Club, which has grown to over 300 members since its inception. I led it until my graduation, organizing workshops, contacting local companies and organizations to give lectures and present special topics, and introducing undergraduates to researchers who needed help doing analytics work.<br/><br/>
-                              After graduating in 2019, I completed an Chaos Engineering internship with Capital One before proceeding to my graduate program at Carnegie Mellon University to study Computational Biology. For my 2020 summer internship, I was accepted into Amazon's Graduate Intern program and worked as a Software Engineer in their research org.<br/><br/>
-                              As I write this now, I'm completing my third semester as an MS student. I'm taking courses such as Cloud Computing, Computational Data Science, and Neural Computation, and applying to PhD programs as well as full time Data Science jobs. Thanks for reading!<br/><br/>
-                              You can see some of my projects (including Hackathon projects) on my <a target="_blank" href="https://github.com/MatthewWolff">personal GitHub</a>.<br/></span>
-                        </p>
+                              Instead of returning to research right away, I got into competitive programming and <a
+                                                target="_blank" href="https://devpost.com/MatthewWolff">the hackathon scene</a>, competing with UW-Madison's  <a
+                                                target="_blank"
+                                                href="https://pages.cs.wisc.edu/~dieter/ICPC/hall-of-fame.html">ICPC</a> and traveling across (and out) of the country to participate at HackMIT and Waterloo's Hack the North. I picked up an interest in bioinformatics and applied machine learning and began to self-teach myself data science, founding UW-Madison's Data Science club (which now sits at 300+ members and still sends out regular newsletters). I sought out relevant research for the follow semester and was offered a long-term position in a<a
+                                                target="_blank"
+                                                href="https://mcmahonlab.wisc.edu/"> bacteriology </a> <a
+                                                target="_blank" href="https://mcmahonlab.wisc.edu/">research lab</a>, where I maintained and enhanced a data pipeline for hundreds of gigabytes of metagenomic data. This helped me obtain a Data Analyst Engineering Internship in 2018 for <a
+                                                target="_blank" href="https://www.arity.com/">Arity</a>, the predictive analytics brainchild of <a
+                                                target="_blank" href="https://www.allstate.com/">AllState</a>. I built a Spark pipeline to ingest and analyze millions of records, each day generating a data monitoring report. <br/><br/>
+                             I led the Data Science Club until my graduation, organizing workshops, contacting local companies and organizations to give lectures on special topics, and matching undergraduates with researchers who needed help with analytics work.<br/><br/>
+                              After graduating in 2019, I completed a Chaos Engineering internship with Capital One before proceeding to my graduate program at Carnegie Mellon University to study Computational Biology. Between serving as a teaching assistant for three courses and a 2020 internship with Amazon's graduate intern program, I kept busy as the global pandemic came into full swing. I graduated with a 3.97 GPA from Carnegie Mellon in 2021, and moved to Seattle to work for Amazon.<br/><br/>
+                                        Thanks for reading! Feel free to look at some of my more recent projects on my <a
+                                                target="_blank"
+                                                href="https://github.com/MatthewWolff">GitHub</a>.!<br/></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research -->
+                <!-- <div class="item full-width">
+                  <div class="carousel-caption">
+                    <div class="container">
+                      <div class="row">
+                        <p class="console-navbar">
+                          ┌─<font color="gray">[</font><font color="CACDFF">~/technical</font><font color="gray">]</font>─<font color="gray">[</font><font color="white">anon@wolff.sh</font><font color="gray">]</font>
+                          <font color="red">(ssh) </font><font color="gold">(git master)</font>
+                          <br/> │
+                          <br/> └─<font color="gray">$</font> cd <u>research/</u> && ls -R </p> </p>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12 col-lg-offset-1 consola">
+                          <div class="container console-text">
+                            <p> color="gray">$</font> ls -d1 <u>*/</u> <span class="tab">
+                                          TODO <br/>
+                                       </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                </div> -->
 
-          <!-- Research -->
-          <!-- <div class="item full-width">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="row">
-                  <p class="console-navbar">
-                    ┌─<font color="gray">[</font><font color="CACDFF">~/technical</font><font color="gray">]</font>─<font color="gray">[</font><font color="white">anon@wolff.sh</font><font color="gray">]</font>
-                    <font color="red">(ssh) </font><font color="gold">(git master)</font>
-                    <br/> │
-                    <br/> └─<font color="gray">$</font> cd <u>research/</u> && ls -R </p> </p>
-                </div>
-                <div class="row">
-                  <div class="col-lg-12 col-lg-offset-1 consola">
-                    <div class="container console-text">
-                      <p> color="gray">$</font> ls -d1 <u>*/</u> <span class="tab">
-                                    TODO <br/>
-                                 </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div> -->
-
+            <!-- Carousel -->
         </div>
-        <!-- Carousel -->
-      </div>
     </div>
-  </section>
+</section>
 
-  <section id="contact" class="container content-section text-center">
+<section id="contact" class="container content-section text-center">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2> Contact </h2>
-        <h5><a href="mailto:mwolff@cmu.edu" class="white text-center"> mwolff@cmu.edu </a></h5>
-        <ul class="list-inline banner-social-buttons">
-          <li><a href="https://github.com/matthewwolff" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw fa-col"></i> <span class="network-name"> Github </span></a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/thematthewwolff" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw fa-col"></i> <span class="network-name"> LinkedIn </span></a>
-          </li>
-        </ul>
-      </div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2> Contact </h2>
+            <h5><a href="mailto:mwolff@alumni.cmu.edu" class="white text-center"> mwolff@alumni.cmu.edu </a></h5>
+            <ul class="list-inline banner-social-buttons">
+                <li><a href="https://github.com/matthewwolff" target="_blank" class="btn btn-default btn-lg"><i
+                        class="fa fa-github fa-fw fa-col"></i> <span class="network-name"> Github </span></a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/thematthewwolff" target="_blank" class="btn btn-default btn-lg"><i
+                            class="fa fa-linkedin fa-fw fa-col"></i> <span class="network-name"> LinkedIn </span></a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="container text-center">
-      <h5> Copyright &copy; Matthew Wolff 2025 </h5>
+        <h5> Copyright &copy; Matthew Wolff 2025 </h5>
     </div>
-  </section>
-  <script src="/external/jquery/jquery.min.js"></script>
-  <script src="/external/bootstrap/js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="/js/mw.js"></script> <!-- god have mercy on my soul for using javascript -->
+</section>
+<script src="/external/jquery/jquery.min.js"></script>
+<script src="/external/bootstrap/js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="/js/mw.js"></script>
 </body>
 <!-- extra spacing for vertically centered contact info -->
 <p>&nbsp;</p>
