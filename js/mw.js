@@ -59,24 +59,19 @@ if(window.mobilecheck()) {
     setTimeout(function() { line1.classList.add('visible'); }, 0);
     setTimeout(function() { line2.classList.add('visible'); }, 200);
 
-    // Animate the progress bar fill character by character
+    // Animate progress bar by rewriting each frame
     setTimeout(function() {
-      var fill = projectsSection.querySelector('.progress-fill');
-      if (!fill) return;
+      var line = projectsSection.querySelector('.progress-line');
+      if (!line) return;
       var total = 20;
       var i = 0;
       var interval = setInterval(function() {
-        fill.textContent += '=';
         i++;
+        var bar = '='.repeat(i) + ' '.repeat(total - i);
+        line.textContent = '[' + bar + ']' + (i >= total ? ' done' : '');
         if (i >= total) clearInterval(interval);
       }, 40);
     }, 300);
-
-    // Show "done" text after bar fills
-    setTimeout(function() {
-      var done = projectsSection.querySelector('.progress-done');
-      if (done) done.classList.add('visible');
-    }, 1100);
 
     // Show "Rendering..." after done
     setTimeout(function() {

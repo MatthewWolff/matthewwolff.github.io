@@ -634,8 +634,9 @@ h6 {
       color: gold;
 }
 
-.progress-fill {
+.progress-line {
       color: gold;
+      white-space: pre;
 }
 
 .progress-done {
