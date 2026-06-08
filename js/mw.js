@@ -13,9 +13,154 @@ window.mobilecheck = function() {
 };
 // adjust bougie site content if it would overflow on mobile? 
 if(window.mobilecheck()) {
-  document.getElementById("ssh").textContent="ssh -i $KEY anon@WOLFF.SH";
+  var titleEl = document.querySelector(".terminal-title");
+  if (titleEl) titleEl.innerHTML = '<span class="connection-dot"></span>ssh -i $KEY anon@WOLFF.SH';
   var prompts = document.getElementsByClassName("prompt");
-  for (var i = 0; i < prompts.length; i++) { // this isn't secure but fuck it
-      prompts[i].innerHTML = prompts[i].innerHTML.replace("(git master)", "").replace("(ssh)","")
+  for (var i = 0; i < prompts.length; i++) {
+      prompts[i].innerHTML = prompts[i].innerHTML.replace("(git master)", "").replace("(ssh)","");
   }
 }
+
+// === PROJECTS SECTION ANIMATION ===
+(function() {
+  var projectsSection = document.getElementById('projects');
+  if (!projectsSection) return;
+
+  var hasPlayed = false;
+  var loadingLines = projectsSection.querySelectorAll('.loading-line');
+  var grid = projectsSection.querySelector('.projects-grid');
+  var cards = projectsSection.querySelectorAll('.project-card');
+
+  cards.forEach(function(card) {
+    var stat = card.getAttribute('data-stat');
+    var statEl = card.querySelector('.card-stat');
+    if (stat && statEl) {
+      statEl.textContent = stat;
+    }
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !hasPlayed) {
+        hasPlayed = true;
+        playLoadingAnimation();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(projectsSection);
+
+  function playLoadingAnimation() {
+    // Show first two lines with stagger
+    var line1 = loadingLines[0];
+    var line2 = loadingLines[1];
+    var line3 = projectsSection.querySelector('.loading-line-rendering');
+
+    setTimeout(function() { line1.classList.add('visible'); }, 0);
+    setTimeout(function() { line2.classList.add('visible'); }, 200);
+
+    // Animate the progress bar fill character by character
+    setTimeout(function() {
+      var fill = projectsSection.querySelector('.progress-fill');
+      if (!fill) return;
+      var total = 20;
+      var i = 0;
+      var interval = setInterval(function() {
+        fill.textContent += '=';
+        i++;
+        if (i >= total) clearInterval(interval);
+      }, 40);
+    }, 300);
+
+    // Show "done" text after bar fills
+    setTimeout(function() {
+      var done = projectsSection.querySelector('.progress-done');
+      if (done) done.classList.add('visible');
+    }, 1100);
+
+    // Show "Rendering..." after done
+    setTimeout(function() {
+      if (line3) line3.classList.add('visible');
+    }, 1300);
+
+    // Show cards
+    setTimeout(function() {
+      grid.classList.add('visible');
+    }, 1600);
+  }
+})();
+
+// === CONTACT SECTION ENTRANCE ===
+(function() {
+  var contactEl = document.querySelector('.contact-animate');
+  if (!contactEl) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        contactEl.classList.add('visible');
+        observer.unobserve(contactEl);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(contactEl);
+})();
+
+// === GA4 EVENT TRACKING ===
+(function() {
+  if (typeof gtag !== 'function') return;
+
+  // Track project card clicks
+  document.querySelectorAll('.project-card').forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      // Don't double-track if GitHub icon was clicked
+      if (e.target.closest('.card-github')) return;
+      var title = card.querySelector('.card-title');
+      gtag('event', 'project_click', {
+        project_name: title ? title.textContent : '',
+        link_url: card.href || '',
+        click_source: 'card'
+      });
+    });
+  });
+
+  // Track GitHub icon clicks separately
+  document.querySelectorAll('.card-github').forEach(function(icon) {
+    icon.addEventListener('click', function() {
+      var card = icon.closest('.project-card');
+      var title = card ? card.querySelector('.card-title') : null;
+      gtag('event', 'project_click', {
+        project_name: title ? title.textContent : '',
+        click_source: 'github_icon'
+      });
+    });
+  });
+
+  // Track section views via scroll
+  var sectionsFired = {};
+  var sections = document.querySelectorAll('.snap-section[id]');
+  var sectionObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !sectionsFired[entry.target.id]) {
+        sectionsFired[entry.target.id] = true;
+        gtag('event', 'section_view', {
+          section: entry.target.id
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach(function(s) { sectionObserver.observe(s); });
+
+  // Track outbound link clicks (resume, social buttons)
+  document.querySelectorAll('.banner-social-buttons a, a[href="resume"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var label = link.querySelector('.network-name');
+      gtag('event', 'outbound_click', {
+        link_url: link.href || '',
+        link_label: label ? label.textContent.trim() : 'resume'
+      });
+    });
+  });
+})();
+

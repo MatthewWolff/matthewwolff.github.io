@@ -6,13 +6,6 @@
       font-size: 24px;
 }
 
-.sidebyside {
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto;
-      vertical-align: text-top;
-}
-
 .indicator-hover:hover {
       background-color: silver;
 }
@@ -38,10 +31,6 @@
       color: white;
 }
 
-.green {
-      color: green;
-}
-
 .container {
       padding-left: 0px;
       padding-right: 0px;
@@ -64,34 +53,20 @@
       }
 }
 
-.tab-2 {
-      width: 100%;
-      display: inline-block;
-      padding-left: 3%;
-}
-
 .console-text {
       font-size: 18px;
       text-align: left;
 }
 
-.console {
-      border: 10px solid #222222;
-      border-style: solid;
-      border-top: none;
-      height: 800px;
-      background-color: #000000;
-}
-
 .console-navbar {
-      padding: 10px 0px 0px 15px;
-      height: 75px;
-      font-size: 24px;
+      padding: 10px 15px;
+      height: auto;
+      font-size: 16px;
       margin-left: 50px;
       margin-right: 50px;
       background-color: #222222;
       font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
-      line-height: 0.75;
+      line-height: 1.4;
       text-align: left;
 }
 
@@ -100,10 +75,6 @@
       line-height: 1.5;
       height: 40px;
       text-align: center;
-}
-
-.carousel-custom {
-      background: #111111;
 }
 
 .carousel-controls {
@@ -128,7 +99,6 @@
 .carousel-controls:focus {
       color: #fff;
       text-decoration: none;
-      filter: alpha(opacity=90);
       outline: 0;
       opacity: .9;
 }
@@ -194,6 +164,7 @@ body {
       font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: white;
       background-color: black;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 html {
@@ -225,14 +196,37 @@ p {
 
 @media (max-width: 768px) {
       .console-navbar {
-            padding-top: 9px;
-            font-size: 11px;
-            height: 40px;
+            padding: 8px 10px;
+            font-size: 10px;
+            height: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+      }
+      .console-navbar.prompt {
+            margin-left: 50px;
+            margin-right: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
       }
       .console-navbar-short {
-            font-size: 13px;
-            padding-top: 1px;
-            height: 20px;
+            font-size: 10px;
+            padding: 5px 10px;
+            height: auto;
+      }
+      .terminal-titlebar {
+            margin-left: 10px;
+            margin-right: 10px;
+      }
+      .terminal-dots {
+            gap: 5px;
+      }
+      .dot {
+            width: 8px;
+            height: 8px;
+      }
+      .terminal-title {
+            font-size: 10px;
       }
 }
 
@@ -359,7 +353,7 @@ a:focus {
       vertical-align: middle;
 }
 
-.intro .intro-body .brand-heading .error-heading {
+.intro .intro-body .error-heading {
       font-weight: lighter;
       font-family: Century Gothic, sans-serif;
       font-size: 40px;
@@ -408,23 +402,6 @@ a:focus {
       background: rgba(255, 255, 255, 0.1);
 }
 
-.btn-circle i.animated {
-      -webkit-transition-property: -webkit-transform;
-      -webkit-transition-duration: 1s;
-      -moz-transition-property: -moz-transform;
-      -moz-transition-duration: 1s;
-}
-
-.btn-circle:hover i.animated {
-      -webkit-animation-name: pulse;
-      -moz-animation-name: pulse;
-      -webkit-animation-duration: 1.5s;
-      -moz-animation-duration: 1.5s;
-      -webkit-animation-iteration-count: infinite;
-      -moz-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-      -moz-animation-timing-function: linear;
-}
 
 @-webkit-keyframes pulse {
       0% {
@@ -546,9 +523,6 @@ img::-moz-selection {
       background: transparent;
 }
 
-body {
-      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
-}
 
 h6 {
       font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
@@ -557,40 +531,466 @@ h6 {
       font-size: 18px;
 }
 
-.glow {
-      -webkit-transition: text-shadow 1s linear;
-      -moz-transition: text-shadow 1s linear;
-      -ms-transition: text-shadow 1s linear;
-      -o-transition: text-shadow 1s linear;
-      transition: text-shadow 1s linear;
-      text-shadow: 0 0 10px grey;
-}
-
-.glow:hover {
-      text-shadow: 0 0 10px grey;
-}
-
 @media only screen and (max-width: 2560px) {
       .console-text {
             font-size: 18px !important;
-      }
-      .console {
-            width: 1170px;
       }
 }
 @media only screen and (max-width: 1440px) {
       .console-text {
             font-size: 15px !important;
       }
-       .console {
-            width: 970px;
-       }
 }
 @media only screen and (max-width: 1080px) {
       .console-text {
             font-size: 11px !important;
       }
-       .console {
-            width: 770px;
+}
+
+/* === SNAP SCROLL === */
+@media (min-width: 769px) {
+      html {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+      }
+
+      .snap-section {
+            scroll-snap-align: start;
+            min-height: 100vh;
       }
 }
+
+@media (max-width: 768px) {
+      .snap-section {
+            min-height: auto;
+      }
+      .intro {
+            height: 100vh;
+            height: 100dvh;
+            padding: 0;
+      }
+}
+
+/* === PROJECTS SECTION === */
+.projects-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      padding: 80px 40px 40px;
+}
+
+.projects-inner {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+}
+
+.projects-section .terminal-titlebar {
+      margin-left: 0;
+      margin-right: 0;
+}
+
+.projects-header {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      padding: 15px;
+      height: auto;
+      border-bottom: 1px solid #333;
+      color: #00ef37;
+      border-radius: 0;
+}
+
+.projects-loading {
+      background: #111;
+      padding: 20px 30px;
+      font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, monospace;
+      font-size: 14px;
+      color: #888;
+      text-align: left;
+      margin-bottom: 16px;
+}
+
+.loading-line {
+      margin-bottom: 8px;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.3s, transform 0.3s;
+}
+
+.loading-line.visible {
+      opacity: 1;
+      transform: translateX(0);
+}
+
+.loading-arrow {
+      color: #00ef37;
+}
+
+.loading-progress {
+      color: gold;
+}
+
+.progress-fill {
+      color: gold;
+}
+
+.progress-done {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+}
+
+.progress-done.visible {
+      opacity: 1;
+}
+
+.progress-done::after {
+      content: 'done';
+      color: #888;
+}
+
+.projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      overflow: visible;
+}
+
+.projects-grid.visible {
+      opacity: 1;
+      transform: translateY(0);
+}
+
+.project-card {
+      position: relative;
+      display: block;
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: left;
+      text-decoration: none;
+      color: inherit;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 2px 8px rgba(3,199,127,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(30px);
+      overflow: visible;
+}
+
+.project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.8), 0 4px 16px rgba(3,199,127,0.1);
+      text-decoration: none;
+      color: inherit;
+}
+
+.project-card:focus {
+      text-decoration: none;
+      color: inherit;
+}
+
+.projects-grid.visible .project-card {
+      opacity: 1;
+      transform: translateY(0);
+}
+
+.projects-grid.visible .project-card:nth-child(1) { transition: opacity 0.4s ease 0s, transform 0.4s ease 0s, box-shadow 0.2s; }
+.projects-grid.visible .project-card:nth-child(2) { transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s, box-shadow 0.2s; }
+.projects-grid.visible .project-card:nth-child(3) { transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s, box-shadow 0.2s; }
+.projects-grid.visible .project-card:nth-child(4) { transition: opacity 0.4s ease 0.45s, transform 0.4s ease 0.45s, box-shadow 0.2s; }
+
+.projects-grid.visible .project-card:hover {
+      transform: translateY(-4px);
+}
+
+.card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+}
+
+.card-title {
+      color: #03c77f;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card-type {
+      color: #666;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+}
+
+.card-desc {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+      padding-right: 0;
+      font-weight: 400;
+}
+
+.card-stat {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      font-size: 12px;
+      color: gold;
+      background: #222;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 4px 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 10;
+}
+
+.project-card:hover .card-stat {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+}
+
+.card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+}
+
+.tag {
+      background: #1a2f1a;
+      color: #03c77f;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: "Lucida Console", monaco, monospace;
+}
+
+.card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+}
+
+.card-link {
+      color: #03c77f;
+      font-size: 12px;
+      opacity: 0.7;
+}
+
+.project-card:hover .card-link {
+      opacity: 1;
+}
+
+.card-github {
+      font-size: 24px;
+      color: #555;
+      transition: color 0.2s;
+      z-index: 2;
+}
+
+.card-github:hover {
+      color: #fff;
+}
+
+.projects-chevron {
+      margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+      .projects-section {
+            padding: 60px 16px 20px;
+            align-items: flex-start;
+      }
+
+      .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+      }
+
+      .project-card {
+            padding: 18px;
+      }
+
+      .card-title {
+            font-size: 16px;
+      }
+
+      .card-desc {
+            font-size: 12px;
+            margin-bottom: 10px;
+      }
+
+      .card-type {
+            font-size: 9px;
+      }
+
+      .tag {
+            font-size: 10px;
+            padding: 2px 8px;
+      }
+
+      .projects-loading {
+            font-size: 11px;
+            padding: 10px 15px;
+      }
+
+      .projects-header {
+            font-size: 14px;
+      }
+
+      .projects-chevron {
+            margin-top: 16px;
+      }
+
+      .terminal-titlebar {
+            margin-left: 0;
+            margin-right: 0;
+      }
+
+      .projects-section .terminal-titlebar {
+            margin-left: 0;
+            margin-right: 0;
+      }
+}
+
+/* === TERMINAL ANIMATIONS === */
+.terminal-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1em;
+      background: #00ef37;
+      margin-left: 4px;
+      vertical-align: text-bottom;
+      animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+}
+
+.terminal-titlebar {
+      margin-left: 50px;
+      margin-right: 50px;
+      background-color: #1a1a1a;
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px solid #333;
+      position: relative;
+      padding: 8px 14px;
+}
+
+.terminal-dots {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 6px;
+}
+
+.dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0.7;
+}
+
+.dot-red { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green { background: #28c840; }
+
+.terminal-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+}
+
+.terminal-icon {
+      margin-right: 8px;
+      color: #666;
+      font-size: 11px;
+}
+
+.connection-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00ef37;
+      margin-left: 10px;
+      vertical-align: middle;
+      animation: dot-pulse 2s ease-in-out infinite;
+      box-shadow: 0 0 4px #00ef37;
+}
+
+@keyframes dot-pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 4px #00ef37; }
+      50% { opacity: 0.4; box-shadow: 0 0 2px #00ef37; }
+}
+
+/* === HERO ENTRANCE ANIMATION === */
+.hero-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: hero-fade-in 0.6s ease forwards;
+}
+
+.hero-animate-delay {
+      animation-delay: 0.2s;
+}
+
+.hero-animate-delay-2 {
+      animation-delay: 0.4s;
+}
+
+@keyframes hero-fade-in {
+      to {
+            opacity: 1;
+            transform: translateY(0);
+      }
+}
+
+/* === CHEVRON CONTINUOUS BOUNCE === */
+.btn-circle i.animated {
+      animation: chevron-bounce 2s ease-in-out infinite;
+}
+
+@keyframes chevron-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+}
+
+/* === CONTACT SECTION ENTRANCE === */
+.contact-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+}
+
+/* === CAROUSEL SLIDE FADE === */
+.carousel-inner > .item {
+      transition: opacity 0.3s ease;
+}
+

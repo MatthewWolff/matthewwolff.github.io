@@ -33,14 +33,12 @@
     <link rel="manifest" href="/favicon/site.webmanifest"/>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
-          type="text/css"/>
-    <link href="/external/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lora:400,700,400italic,700italic" type="text/css"/>
+    <link href="/external/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/css/mw.css"/>
 
     <!-- icons -->
-    <link href="/external/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="/external/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
     <title>$ ./matthew_wolff</title>
     <!--  For Google indexing  -->
@@ -84,7 +82,7 @@
         <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
             <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-home"></i> <span
                     class="light"> HOME </span></a>
-            <a class="navbar-brand page-scroll" target="_blank" href="https://github.com/matthewwolff"><i
+            <a class="navbar-brand page-scroll" onclick="jump('#projects')"><i
                     class="fa fa-desktop"></i> <span class="light"> Projects </span></a>
             <a class="navbar-brand page-scroll" href="resume" target="_blank"><i class="fa fa-address-card"></i> <span
                     class="light"> Résumé </span></a>
@@ -107,33 +105,158 @@
         </div>
     </div>
 </nav>
-<header class="intro">
+<header class="intro snap-section">
     <div class="intro-body">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="brand-heading"> Matthew Wolff </h2>
-                    <p class="intro-text"> Machine Learning Engineer, Data Scientist, Genetics Nerd </p>
-                    <a onclick="jump('#about')" class="btn btn-circle"><i class="fa fa-angle-double-down animated"></i></a>
+                    <h2 class="brand-heading hero-animate"> Matthew Wolff </h2>
+                    <p class="intro-text hero-animate hero-animate-delay"> Machine Learning Engineer, Data Scientist, Genetics Nerd </p>
+                    <a onclick="jump('#projects')" class="btn btn-circle hero-animate hero-animate-delay-2"><i class="fa fa-angle-double-down animated"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<section class="container content-section about">
+<section id="projects" class="snap-section projects-section">
+    <div class="projects-inner">
+        <!-- Terminal titlebar -->
+        <div class="terminal-titlebar">
+            <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title"><i class="fa fa-terminal terminal-icon"></i>zsh - ssh -i ~/.ssh/id_rsa anon@WOLFF.SH<span class="connection-dot"></span></div>
+        </div>
+        <!-- Terminal header -->
+        <div class="console-navbar console-navbar-short projects-header">
+            <span style="color: gray;">$</span> ./showcase.sh
+        </div>
+
+        <!-- Loading animation area -->
+        <div class="projects-loading">
+            <div class="loading-line" data-delay="0">
+                <span class="loading-arrow">▸</span> Fetching project metadata...
+            </div>
+            <div class="loading-line" data-delay="200">
+                <span class="loading-arrow">▸</span> Loading 4 projects [<span class="progress-fill"></span>] <span class="progress-done"></span>
+            </div>
+            <div class="loading-line loading-line-rendering">
+                <span class="loading-arrow">▸</span> Rendering...
+            </div>
+        </div>
+
+        <!-- Card grid -->
+        <div class="projects-grid">
+            <a href="https://tonite.fyi" target="_blank" class="project-card" data-stat="Updated daily">
+                <div class="card-top">
+                    <span class="card-title">tonite.fyi</span>
+                    <span class="card-type">Data Pipeline</span>
+                </div>
+                <div class="card-desc">Multi-city event aggregator. Scrapes, deduplicates, tags, and scores local events into a self-contained viewer.</div>
+                <div class="card-stat"></div>
+
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Gemini</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Scraping</span>
+                </div>
+                <div class="card-footer">
+                    <span class="card-link">tonite.fyi →</span>
+                    <div class="card-github"><i class="fa fa-github" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/matthewwolff/tonite.fyi', '_blank');"></i></div>
+                </div>
+            </a>
+
+            <a href="https://wolff.sh/tend" target="_blank" class="project-card" data-stat="Beta">
+                <div class="card-top">
+                    <span class="card-title">Tend</span>
+                    <span class="card-type">iOS App</span>
+                </div>
+                <div class="card-desc">Personal relationship manager. Set how often you want to see each friend — Tend handles the rest with gentle, ADHD-friendly nudges.</div>
+                <div class="card-stat"></div>
+
+                <div class="card-tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">WatermelonDB</span>
+                    <span class="tag">Supabase</span>
+                    <span class="tag">ECharts</span>
+                </div>
+                <div class="card-footer">
+                    <span class="card-link">App Store →</span>
+                    <div class="card-github"><i class="fa fa-github" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/matthewwolff/tend', '_blank');"></i></div>
+                </div>
+            </a>
+
+            <a href="https://github.com/matthewwolff/TwitterScraper" target="_blank" class="project-card" data-stat="★ 168">
+                <div class="card-top">
+                    <span class="card-title">TwitterScraper</span>
+                    <span class="card-type">Open Source</span>
+                </div>
+                <div class="card-desc">Bypass Twitter's 3,200 tweet API limit. Programmatically scrape any user's full tweet history using Selenium-driven browser automation and HTML parsing.</div>
+                <div class="card-stat"></div>
+
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Selenium</span>
+                    <span class="tag">BeautifulSoup</span>
+                </div>
+                <div class="card-footer">
+                    <span class="card-link">github.com →</span>
+                    <div class="card-github"><i class="fa fa-github"></i></div>
+                </div>
+            </a>
+
+            <a href="https://markdesk.wolff.sh" target="_blank" class="project-card" data-stat="27M+ marks indexed">
+                <div class="card-top">
+                    <span class="card-title">MarkDesk</span>
+                    <span class="card-type">SaaS</span>
+                </div>
+                <div class="card-desc">AI-powered USPTO trademark prosecution copilot. FTS5 + phonetic search over 27M marks, Gemini-powered classification, Stripe payments.</div>
+                <div class="card-stat"></div>
+
+                <div class="card-tags">
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">SQLite</span>
+                    <span class="tag">Gemini</span>
+                    <span class="tag">Stripe</span>
+                    <span class="tag">Terraform</span>
+                </div>
+                <div class="card-footer">
+                    <span class="card-link">markdesk.wolff.sh →</span>
+                    <div class="card-github"><i class="fa fa-github" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/MatthewWolff/markdesk-system-design', '_blank');"></i></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Chevron to about section -->
+        <a onclick="jump('#about')" class="btn btn-circle projects-chevron"><i class="fa fa-angle-double-down animated"></i></a>
+    </div>
+</section>
+<section class="container content-section about snap-section">
     <!-- Carousel -->
     <div id="about" class="container content-section">
         <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
-            <div class="row">
-                <p id="ssh" class="console-navbar console-navbar-short"> ssh -i ~/.ssh/id_rsa anon@WOLFF.SH </p>
-            </div>
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carousel" data-slide-to="0" class="active indicator-hover"></li>
                 <li data-target="#carousel" data-slide-to="1" class="indicator-hover"></li>
                 <li data-target="#carousel" data-slide-to="2" class="indicator-hover"></li>
-                <!-- <li data-target="#carousel" data-slide-to="3" class="indicator-hover"></li> -->
             </ol>
+            <div class="row">
+                <div class="terminal-titlebar">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title"><i class="fa fa-terminal terminal-icon"></i>ssh -i ~/.ssh/id_rsa anon@WOLFF.SH<span class="connection-dot"></span></div>
+                </div>
+            </div>
 
             <!-- Inner -->
             <div class="carousel-inner console-background">
@@ -151,15 +274,7 @@
                         <div class="container">
                             <div class="row">
                                 <p class="console-navbar prompt">
-                                    ┌─<span style="color: gray; ">[</span><span
-                                        style="color: #CACDFF; ">~/experience</span><span
-                                        style="color: gray; ">]</span>─<span style="color: gray; ">[</span><span
-                                        style="color: white; ">anon@wolff.sh</span><span
-                                        style="color: gray; ">]</span>
-                                    <span style="color: red; ">(ssh) </span><span
-                                        style="color: gold; ">(git master)</span>
-                                    <br/> │
-                                    <br/> └─<span style="color: gray; ">$</span> bash -x academics.sh </p>
+                                    ┌─<span style="color: gray;">[</span><span style="color: #CACDFF;">~/experience</span><span style="color: gray;">]</span>─<span style="color: gray;">[</span><span style="color: white;">anon@wolff.sh</span><span style="color: gray;">]</span>─<span style="color: gray;">[</span><span style="color: red;">ssh</span><span style="color: gray;">]</span>─<span style="color: gold;">(git:master)</span><br/>└─<span style="color: gray;">[</span><span style="color: #00ef37;">>:)</span><span style="color: gray;">]</span> > bash -x academics.sh<span class="terminal-cursor"></span></p>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-lg-offset-1 consola">
@@ -255,31 +370,6 @@
                                     National Merit Finalist – 2240/2400 SAT; 36/36 ACT</span>
                                         </p>
 
-                                        <p> + ls -1Gr <u>../coursework/grad</u><span class="tab">
-                        <span style="color: #5ffdff; ">
-                                              15-637 Foundations of Computational Data Science (Python, Java)<br/>
-                                              02-601 Machine Learning for Scientists (Python, MATLAB)<br/>
-                                              10-605 Machine Learning with Large Datasets<br/>
-                                              15-619 Cloud Computing (Python, Scala, Java) [AWS, Azure, Google Cloud]<br/>
-                                              02-712 Computational Methods for Biological Modeling & Simulation (Python) <br/>
-                                              02-613 Advanced Data Structures & Algorithms <br/>
-                                              15-686 Neural Computation (MATLAB) <br/>
-                                              02-718 Computational Medicine (Python) <br/>
-                        </span></span>
-                                        </p>
-
-                                        <p> + ls -1Gr <u>../coursework/undergrad</u><span class="tab">
-                        <span style="color: #5ffdff; ">
-                                              CS 639 Data Management for Data Scientists (Python, SQL)<br/>
-                                              CS 577 Algorithms <br/>
-                                              CS 576 Bioinformatics (Python) <br/>
-                                              CS 564 Databases (C++) <br/>
-                                              CS 540 Artificial Intelligence (Java) <br/>
-                                              CS 537 Operating Systems (C) <br/>
-                                              CS 367 Data Structures (Java) <br/>
-                                              CS 354 Machine Organization & Programming (C) <br/> 
-                        </span></span>
-                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -292,39 +382,24 @@
                         <div class="container">
                             <div class="row">
                                 <p class="console-navbar prompt">
-                                    ┌─<span style="color: gray; ">[</span><span
-                                        style="color: #CACDFF; ">~/technical</span><span
-                                        style="color: gray; ">]</span>─<span style="color: gray; ">[</span><span
-                                        style="color: white; ">anon@wolff.sh</span><span
-                                        style="color: gray; ">]</span>
-                                    <span style="color: red; ">(ssh) </span><span
-                                        style="color: gold; ">(git master)</span>
-                                    <br/> │
-                                    <br/> └─<span style="color: gray; ">$</span> brew install --cask matthew-wolff <span
-                                        style="color: gold; "></span></p>
+                                    ┌─<span style="color: gray;">[</span><span style="color: #CACDFF;">~/technical</span><span style="color: gray;">]</span>─<span style="color: gray;">[</span><span style="color: white;">anon@wolff.sh</span><span style="color: gray;">]</span>─<span style="color: gray;">[</span><span style="color: red;">ssh</span><span style="color: gray;">]</span>─<span style="color: gold;">(git:master)</span><br/>└─<span style="color: gray;">[</span><span style="color: #00ef37;">>:)</span><span style="color: gray;">]</span> > brew install --cask matthew-wolff<span class="terminal-cursor"></span></p>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-lg-offset-1 consola">
                                     <div class="container console-text">
-                                        <p><span style="color: grey; "> $</span> ls -1Gp <u>projects/</u> <span
-                                                class="tab">
-                                            <a href="https://github.com/matthewwolff/TwitterScraper"> Twitter Scraper (160 stars)/</a><br/>
-                                            <a href="https://github.com/MatthewWolff/SIFFCalendarScraper"> SIFF Calendar Scraper/</a><br/>
-                                            <a href="https://github.com/MatthewWolff/DuolingoAnalysis"> Duolingo Analysis/</a><br/>
-                                            <a href="https://github.com/MatthewWolff/AniClustering"> Anime Recommender System/</a><br/>
-                                            <a href="https://github.com/matthewwolff/pokenet"> Pokémon Neural Network/</a><br/>
-                                            <a href="https://github.com/matthewwolff/MarkovTweets"> Markov-Chaining Twitter Bot/</a><br/>
-                                            <!--                        <a href="https://github.com/matthewwolff/NLP_genomics"> Natural Language Processing with Genomics/</a><br/> -->
-                                            <!--<a href="https://github.com/matthewwolff/theDNABot"> Twitter DNA Bot/</a><br/>-->
-                                            <!--<a href="https://github.com/matthewwolff/IsItFiller"> Is It Filler?/</a><br/>-->
-                      </span>
-                                        </p>
                                         <p><span style="color: grey; "> $</span> ls <u>languages/</u> <span class="tab">
                           <span style="color: #c91b00; ">
-                          Python &nbsp;&nbsp; SQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scala </span><br/>
+                          Python &nbsp;&nbsp; Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TypeScript &nbsp; SQL </span><br/>
                           <span style="color: #c91b00; ">
-                          R &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shell (BASH) &nbsp; Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LaTeX </span><br/>
+                          Scala &nbsp;&nbsp;&nbsp; Shell (ZSH) &nbsp;&nbsp; R &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoSQL </span><br/>
                         </span>
+                                        </p>
+
+                                        <p><span style="color: grey; "> $</span> cat <u>certifications.txt</u> <span class="tab">
+                          <span style="color: #5ffdff; ">
+                          AWS Certified Solutions Architect – Associate (2024)<br/>
+                          HashiCorp Certified: Terraform Associate (2023)<br/>
+                          </span></span>
                                         </p>
 
                                         <p><span style="color: grey; "> $</span> cd <u>experience/</u> && ls -RpG <span
@@ -379,17 +454,7 @@
                         <div class="container">
                             <div class="row">
                                 <p class="console-navbar prompt">
-                                    ┌─<span style="color: gray; ">[</span><span
-                                        style="color: #CACDFF; ">~/personal</span><span
-                                        style="color: gray; ">]</span>─<span style="color: gray; ">[</span><span
-                                        style="color: white; ">anon@wolff.sh</span><span
-                                        style="color: gray; ">]</span>
-                                    <span style="color: red; ">(ssh) </span><span
-                                        style="color: gold; ">(git master)</span>
-                                    <br/> │
-                                    <br/> └─<span style="color: gray; ">$</span> cat <<< <span style="color: gold; ">"hire me"</span>
-                                    | mail
-                                    -s <span style="color: gold; ">"pls"</span> $YOU</p>
+                                    ┌─<span style="color: gray;">[</span><span style="color: #CACDFF;">~/personal</span><span style="color: gray;">]</span>─<span style="color: gray;">[</span><span style="color: white;">anon@wolff.sh</span><span style="color: gray;">]</span>─<span style="color: gray;">[</span><span style="color: red;">ssh</span><span style="color: gray;">]</span>─<span style="color: gold;">(git:master)</span><br/>└─<span style="color: gray;">[</span><span style="color: #00ef37;">>:)</span><span style="color: gray;">]</span> > cat <<< "hire me" | mail -s "pls" $YOU<span class="terminal-cursor"></span></p>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-lg-offset-1 consola">
@@ -402,30 +467,9 @@
                                   Cats: 2<br/>
                                   Hobbies: Lifting, bouldering, unnecessary automation, Overwatch</span>
                                             <!-- no one's going to read this -->
-                                        <p><span style="color: grey; "> $</span> history <span class="tab">
-                              In 2015 I began attending the University of Wisconsin, the shared alma mater of both my parents. In the first month, I became involved in a computational epidemiology lab that focused on <a
-                                                target="_blank"
-                                                href="https://pophealth.wisc.edu/staff/engelman-corinne/"> Alzheimer's research</a>. Much of my work revolved around the application of machine learning (ML) methods to human data. I worked with Random Forests to characterize gene-gene and gene-environment interactions with the goal of identifying predictors for Alzheimer's. I then worked with metabolomic data, implementing dimensionality reduction and clustering techniques. Under the direction of Dr. Engelman, I presented my work with metabolomics and RandomForests at the 2016 Undergraduate Research Symposium.<br/><br/>
-                              I then spent a semester working with a PhD student in a <a target="_blank"
-                                                                                         href="https://payseur.genetics.wisc.edu/">genetics lab</a> where I wrote <a
-                                                target="_blank" href="https://github.com/MatthewWolff/image_Analysis">software</a> to do semi-supervised image processing & annotation of mouse chromosomal data. Interning in Summer 2017 as a Software Developer at <a
-                                                target="_blank"
-                                                href="https://www.thesilverlining.com/">West Bend Mutual Insurance</a>, I wrote data processing programs in C#, R, and VBA to manipulate some delightful legacy "databases" (Excel spreadsheets) and port them into a MySQL database. I had to touch on some front-end development and taught myself Python on the side.
-                              <br/><br/>
-                              Instead of returning to research right away, I got into competitive programming and <a
-                                                target="_blank" href="https://devpost.com/MatthewWolff">the hackathon scene</a>, competing with UW-Madison's  <a
-                                                target="_blank"
-                                                href="https://pages.cs.wisc.edu/~dieter/ICPC/hall-of-fame.html">ICPC</a> and traveling across (and out) of the country to participate at HackMIT and Waterloo's Hack the North. I picked up an interest in bioinformatics and applied machine learning and began to self-teach myself data science, founding UW-Madison's Data Science club (which now sits at 300+ members and still sends out regular newsletters). I sought out relevant research for the follow semester and was offered a long-term position in a<a
-                                                target="_blank"
-                                                href="https://mcmahonlab.wisc.edu/"> bacteriology </a> <a
-                                                target="_blank" href="https://mcmahonlab.wisc.edu/">research lab</a>, where I maintained and enhanced a data pipeline for hundreds of gigabytes of metagenomic data. This helped me obtain a Data Analyst Engineering Internship in 2018 for <a
-                                                target="_blank" href="https://www.arity.com/">Arity</a>, the predictive analytics brainchild of <a
-                                                target="_blank" href="https://www.allstate.com/">AllState</a>. I built a Spark pipeline to ingest and analyze millions of records, each day generating a data monitoring report. <br/><br/>
-                             I led the Data Science Club until my graduation, organizing workshops, contacting local companies and organizations to give lectures on special topics, and matching undergraduates with researchers who needed help with analytics work.<br/><br/>
-                              After graduating in 2019, I completed a Chaos Engineering internship with Capital One before proceeding to my graduate program at Carnegie Mellon University to study Computational Biology. Between serving as a teaching assistant for three courses and a 2020 internship with Amazon's graduate intern program, I kept busy as the global pandemic came into full swing. I graduated with a 3.97 GPA from Carnegie Mellon in 2021, and moved to Seattle to work for Amazon.<br/><br/>
-                                        Thanks for reading! Feel free to look at some of my more recent projects on my <a
-                                                target="_blank"
-                                                href="https://github.com/MatthewWolff">GitHub</a>.<br/></span>
+                                        </p>
+                                        <p><span style="color: grey; "> $</span> history | tail -3 <span class="tab">
+                              I studied computer science and genetics at Wisconsin, then computational biology at Carnegie Mellon. Now I build ML infrastructure at Amazon and ship side projects on nights and weekends. I like hard problems, clean tools, and building things people actually use.</span>
                                         </p>
                                     </div>
                                 </div>
@@ -465,8 +509,8 @@
     </div>
 </section>
 
-<section id="contact" class="container content-section text-center">
-    <div class="row">
+<section id="contact" class="container content-section text-center snap-section">
+    <div class="row contact-animate">
         <div class="col-lg-8 col-lg-offset-2">
             <h2> Contact </h2>
             <h5><a href="mailto:mwolff@alumni.cmu.edu" class="white text-center"> mwolff@alumni.cmu.edu </a></h5>
@@ -478,16 +522,20 @@
                     <a href="https://linkedin.com/in/thematthewwolff" target="_blank" class="btn btn-default btn-lg"><i
                             class="fa fa-linkedin fa-fw fa-col"></i> <span class="network-name"> LinkedIn </span></a>
                 </li>
+                <li>
+                    <a href="https://instagram.com/matthewwolff" target="_blank" class="btn btn-default btn-lg"><i
+                            class="fa fa-instagram fa-fw fa-col"></i> <span class="network-name"> Instagram </span></a>
+                </li>
             </ul>
         </div>
     </div>
+    <br/>
     <div class="container text-center">
-        <h5> Copyright &copy; Matthew Wolff 2025 </h5>
+        <h5> Copyright &copy; Matthew Wolff 2026 </h5>
     </div>
 </section>
 <script src="/external/jquery/jquery.min.js"></script>
-<script src="/external/bootstrap/js/bootstrap.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="/external/bootstrap/js/bootstrap.min.js"></script>
 <script src="/js/mw.js"></script>
     <!-- extra spacing for vertically centered contact info -->
     <p>&nbsp;</p>
