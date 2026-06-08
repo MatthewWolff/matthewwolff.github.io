@@ -13,8 +13,11 @@ window.mobilecheck = function() {
 };
 // adjust bougie site content if it would overflow on mobile? 
 if(window.mobilecheck()) {
-  var titleEl = document.querySelector(".terminal-title");
-  if (titleEl) titleEl.innerHTML = '<span class="connection-dot"></span>ssh -i $KEY anon@WOLFF.SH';
+  var titleEls = document.querySelectorAll(".terminal-title");
+  titleEls.forEach(function(el) {
+    var text = el.textContent.replace('zsh - ssh -i ~/.ssh/id_rsa', 'ssh -i $KEY');
+    el.innerHTML = '<i class="fa fa-terminal terminal-icon"></i>' + text.trim() + '<span class="connection-dot"></span>';
+  });
   var prompts = document.getElementsByClassName("prompt");
   for (var i = 0; i < prompts.length; i++) {
       prompts[i].innerHTML = prompts[i].innerHTML.replace("(git master)", "").replace("(ssh)","");
