@@ -2,51 +2,143 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX630D4XCV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX630D4XCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YX630D4XCV', {'page_title': 'resume'});
+    </script>
 
-    gtag('config', 'G-YX630D4XCV', {'page_title': 'resume'});
-  </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=http://resume.wolff.sh">
-  <link rel="canonical" href="http://resume.wolff.sh">
-  <meta name="title" content="Matthew Wolff's Resume">
-  <meta name="description" content="Redirecting to Matthew Wolff's resume">
-  <meta property="og:site_name" content="wolff.sh">
-  <meta property="og:url" content="https://wolff.sh/resume">
-  <meta property="og:title" content="Matthew Wolff's Resume">
-  <meta property="og:description" content="Redirecting to Matthew Wolff's resume">
-  <meta property="og:image" content="https://wolff.sh/img/resume.jpg">
-  <meta property="og:image:type" content="image/jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Matthew Wolff — Resume">
+    <meta name="description" content="Matthew Wolff's resume — Machine Learning Engineer at Amazon.">
+    <meta property="og:site_name" content="wolff.sh">
+    <meta property="og:url" content="https://wolff.sh/resume">
+    <meta property="og:title" content="Matthew Wolff — Resume">
+    <meta property="og:description" content="Machine Learning Engineer at Amazon. Computational Biology background.">
+    <meta property="og:image" content="https://wolff.sh/img/intro-bg.jpg">
 
-  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96"/>
-  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg"/>
-  <link rel="shortcut icon" href="/favicon/favicon.ico"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+    <link rel="manifest" href="/favicon/site.webmanifest"/>
 
-  <title>Resume - Matthew Wolff</title>
-  <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Matthew Wolff",
-        "jobTitle": "Machine Learning Engineer",
-        "url": "https://wolff.sh/resume",
-        "sameAs": [
-            "https://github.com/matthewwolff",
-            "https://linkedin.com/in/thematthewwolff"
-        ],
-        "image": "https://wolff.sh/favicon/favicon.ico"
-    }
-  </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lora:400,700,400italic,700italic" type="text/css"/>
+    <link href="/external/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/navbar.css"/>
+    <link rel="stylesheet" href="/css/terminal.css"/>
+    <link href="/external/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <title>$ cat resume.pdf</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+            background: #0a0a0a;
+            color: #ccc;
+            min-height: 100vh;
+            font-size: 14px;
+        }
+
+
+        /* Page */
+        .page {
+            max-width: 900px;
+            margin: 80px auto 0;
+            padding: 0 20px;
+        }
+
+
+        /* PDF container */
+        .pdf-container {
+            background: #111;
+            border-radius: 0 0 8px 8px;
+            padding: 0;
+            overflow: hidden;
+        }
+        .pdf-container iframe {
+            width: 100%;
+            height: calc(100vh - 100px);
+            border: none;
+            display: block;
+        }
+
+        /* Download link */
+        .download-bar {
+            background: #222;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+            font-size: 14px;
+        }
+        .download-bar .prompt { color: #00ef37; }
+        .download-bar .prompt .gray { color: gray; }
+        .download-bar a {
+            color: #03c77f;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .download-bar a:hover { color: #00ef37; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .page { margin-top: 50px; padding: 0 8px; }
+            .pdf-container iframe { height: calc(100vh - 90px); }
+            .download-bar { font-size: 11px; padding: 10px 12px; }
+        }
+    </style>
 </head>
+
 <body>
-  <p>Redirecting to <a href="http://resume.wolff.sh">resume.wolff.sh</a>...</p>
-  <script>window.location.replace("http://resume.wolff.sh");</script>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" aria-label="Toggle navigation menu"> Menu
+                    <i class="fa fa-bars"></i></button>
+            </div>
+            <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+                <a class="navbar-brand page-scroll" href="/"><i class="fa fa-home"></i> <span class="light"> HOME </span></a>
+                <a class="navbar-brand page-scroll" href="/#projects"><i class="fa fa-desktop"></i> <span class="light"> Projects </span></a>
+                <a class="navbar-brand page-scroll" href="/resume"><i class="fa fa-address-card"></i> <span class="light"> Résumé </span></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/consulting"> &nbsp;&nbsp;Consulting </a></li>
+                    <li><a href="/#about"> &nbsp;&nbsp;About </a></li>
+                    <li><a href="/#contact"> &nbsp;&nbsp;Contact </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page">
+        <div class="terminal-titlebar">
+            <div class="terminal-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+            </div>
+            <div class="terminal-title"><i class="fa fa-terminal terminal-icon"></i>zsh - resume.pdf<span class="connection-dot"></span></div>
+        </div>
+        <div class="pdf-container">
+            <div class="download-bar">
+                <span class="prompt"><span class="gray">$</span> open resume.pdf</span>
+                <a href="https://drive.google.com/uc?export=download&id=1vakVukPnwAhI7in5xxpYtp4ZldAP0QRL" target="_blank"><i class="fa fa-download"></i> download</a>
+            </div>
+            <iframe src="https://drive.google.com/file/d/1vakVukPnwAhI7in5xxpYtp4ZldAP0QRL/preview" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+    <script src="/external/jquery/jquery.min.js"></script>
+    <script src="/external/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
