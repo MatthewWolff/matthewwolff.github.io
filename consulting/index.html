@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX630D4XCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YX630D4XCV', {'page_title': 'consulting'});
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Matthew Wolff — Consulting">
+    <meta name="description" content="ML engineering consulting — system design, AI applications, data pipelines. Open to interesting projects.">
+    <meta property="og:site_name" content="wolff.sh">
+    <meta property="og:url" content="https://wolff.sh/consulting">
+    <meta property="og:title" content="Matthew Wolff — Consulting">
+    <meta property="og:description" content="ML engineering consulting — system design, AI applications, data pipelines.">
+    <meta property="og:image" content="https://wolff.sh/img/intro-bg.jpg">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+    <link rel="manifest" href="/favicon/site.webmanifest"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lora:400,700,400italic,700italic" type="text/css"/>
+    <link href="/external/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/navbar.css"/>
+    <link rel="stylesheet" href="/css/terminal.css"/>
+    <link href="/external/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <title>$ ./consulting.sh</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+            background: #0a0a0a;
+            color: #b0b0b0;
+            min-height: 100vh;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        a { color: #03c77f; text-decoration: none; }
+
+
+
+        /* Main content */
+        .page {
+            max-width: 740px;
+            margin: 80px auto 60px;
+            padding: 0 24px;
+        }
+
+        /* Header area */
+        .page-header {
+            border-bottom: 1px solid #222;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .page-header h1 {
+            font-size: 14px;
+            color: #00ef37;
+            font-weight: 400;
+            margin: 0 0 12px;
+        }
+        .page-header h1 .gray { color: #555; }
+        .page-header p {
+            color: #ccc;
+            margin-bottom: 12px;
+        }
+        .page-header p .w { color: #fff; }
+
+        /* Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            color: #03c77f;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #222;
+        }
+
+        /* Services — rendered like a man page */
+        .man-entry {
+            margin-bottom: 20px;
+            padding-left: 16px;
+            border-left: 2px solid #1a1a1a;
+        }
+        .man-entry:hover {
+            border-left-color: #03c77f;
+        }
+        .man-entry dt {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .man-entry dd {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        /* Fit section — plaintext style */
+        .fit {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .fit-col h3 {
+            font-size: 12px;
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        .fit-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .fit-col ul li {
+            padding: 4px 0;
+            font-size: 13px;
+            color: #bbb;
+        }
+        .fit-col.yes ul li::before { content: '+ '; color: #03c77f; }
+        .fit-col.no ul li::before { content: '- '; color: #664; }
+
+        /* CTA */
+        .cta {
+            margin-top: 40px;
+            padding: 24px;
+            background: #1a1a1a;
+            border: 1px solid #222;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .cta p {
+            color: #999;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #03c77f;
+            color: #000;
+            font-weight: 700;
+            font-size: 13px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover {
+            background: #00ef37;
+            color: #000;
+            text-decoration: none;
+        }
+        .cta-sub {
+            display: block;
+            margin-top: 12px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 24px;
+            font-size: 12px;
+            color: #333;
+        }
+        .footer a { color: #444; }
+        .footer a:hover { color: #999; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { font-size: 13px; }
+            .page { margin-top: 56px; padding: 0 12px; }
+            .fit { grid-template-columns: 1fr; gap: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" aria-label="Toggle navigation menu"> Menu
+                    <i class="fa fa-bars"></i></button>
+            </div>
+            <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+                <a class="navbar-brand page-scroll" href="/"><i class="fa fa-home"></i> <span class="light"> HOME </span></a>
+                <a class="navbar-brand page-scroll" href="/#projects"><i class="fa fa-desktop"></i> <span class="light"> Projects </span></a>
+                <a class="navbar-brand page-scroll" href="/resume"><i class="fa fa-address-card"></i> <span class="light"> Résumé </span></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/consulting"> &nbsp;&nbsp;Consulting </a></li>
+                    <li><a href="/#about"> &nbsp;&nbsp;About </a></li>
+                    <li><a href="/#contact"> &nbsp;&nbsp;Contact </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page">
+        <div class="terminal-titlebar">
+            <div class="terminal-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+            </div>
+            <div class="terminal-title"><i class="fa fa-terminal terminal-icon"></i>zsh - consulting.sh<span class="connection-dot"></span></div>
+        </div>
+        <div class="terminal-body">
+        <header class="page-header">
+            <h1><span class="gray">$</span> cat consulting.md</h1>
+            <p>
+                I'm an <span class="w">ML Engineer at Amazon</span> with a background in
+                <span class="w">computational biology</span>. I build production systems at scale during the day
+                and ship my own products at night — SaaS, iOS apps, data pipelines.
+            </p>
+            <p>
+                I take on a small number of <span class="w">interesting projects</span> each quarter.
+                If you're building something at the intersection of engineering and product,
+                I might be able to help.
+            </p>
+        </header>
+
+        <section class="section">
+            <div class="section-title">what I do</div>
+            <dl>
+                <div class="man-entry">
+                    <dt>ML System Design</dt>
+                    <dd>Pipeline architecture, model serving, feature stores. Taking ML from notebook to production at scale.</dd>
+                </div>
+                <div class="man-entry">
+                    <dt>AI Application Development</dt>
+                    <dd>LLM-powered products, RAG, intelligent search. Things that ship to real users, not demos.</dd>
+                </div>
+                <div class="man-entry">
+                    <dt>Data Pipeline Architecture</dt>
+                    <dd>Scraping at scale, streaming/batch processing, deduplication, data quality systems.</dd>
+                </div>
+                <div class="man-entry">
+                    <dt>Web Development</dt>
+                    <dd>Personal websites, landing pages, and small business web presence. Clean, fast, no-nonsense sites that actually get built.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="section">
+            <div class="section-title">fit</div>
+            <div class="fit">
+                <div class="fit-col yes">
+                    <h3>good match</h3>
+                    <ul>
+                        <li>You need production ML, not a Jupyter notebook</li>
+                        <li>Your AI prototype needs to become a real product</li>
+                        <li>You're a startup that needs senior technical direction</li>
+                        <li>You have a data problem nobody's cracked</li>
+                    </ul>
+                </div>
+                <div class="fit-col no">
+                    <h3>probably not</h3>
+                    <ul>
+                        <li>You need a full-time hire</li>
+                        <li>It's a basic CRUD app</li>
+                        <li>You want someone to "just train a model"</li>
+                        <li>Timeline is under 2 weeks</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta">
+            <p>If this sounds like a fit, reach out.</p>
+            <a href="mailto:mwolff@alumni.cmu.edu?subject=Project%20Inquiry" class="cta-btn">Get in Touch</a>
+            <span class="cta-sub">or email mwolff@alumni.cmu.edu directly</span>
+        </div>
+        </div><!-- /.terminal-body -->
+    </main>
+
+    <footer class="footer">
+        <a href="/">← wolff.sh</a>
+    </footer>
+
+    <script src="/external/jquery/jquery.min.js"></script>
+    <script src="/external/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
