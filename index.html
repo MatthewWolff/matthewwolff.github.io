@@ -20,10 +20,14 @@
     <meta property="og:url" content="https://wolff.sh">
     <meta property="og:title" content="$ ./wolff.sh">
     <meta property="og:description" content="Personal website of a lazy dev">
-    <meta property="og:image" content="/img/intro-bg.jpg">
+    <meta property="og:image" content="https://wolff.sh/img/intro-bg.jpg">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1080">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Matthew Wolff — ML Engineer">
+    <meta name="twitter:description" content="Machine Learning Engineer at Amazon. Projects in AI, data pipelines, and full-stack SaaS.">
+    <meta name="twitter:image" content="https://wolff.sh/img/intro-bg.jpg">
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96"/>
@@ -36,6 +40,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lora:400,700,400italic,700italic" type="text/css"/>
     <link href="/external/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/css/mw.css"/>
+    <link rel="stylesheet" href="/css/navbar.css"/>
+    <link rel="stylesheet" href="/css/terminal.css"/>
 
     <!-- icons -->
     <link href="/external/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -76,7 +82,7 @@
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> Menu
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" aria-label="Toggle navigation menu"> Menu
                 <i class="fa fa-bars"></i></button>
         </div>
         <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
@@ -84,11 +90,12 @@
                     class="light"> HOME </span></a>
             <a class="navbar-brand page-scroll" onclick="jump('#projects')"><i
                     class="fa fa-desktop"></i> <span class="light"> Projects </span></a>
-            <a class="navbar-brand page-scroll" href="resume" target="_blank"><i class="fa fa-address-card"></i> <span
+            <a class="navbar-brand page-scroll" href="/resume"><i class="fa fa-address-card"></i> <span
                     class="light"> Résumé </span></a>
         </div>
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
+                <li><a href="/consulting"> &nbsp;&nbsp;Consulting </a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false"> &nbsp;&nbsp;About <span class="caret"></span></a>
@@ -112,7 +119,7 @@
                 <div class="col-lg-12">
                     <h2 class="brand-heading hero-animate"> Matthew Wolff </h2>
                     <p class="intro-text hero-animate hero-animate-delay"> Machine Learning Engineer, Data Scientist, Genetics Nerd </p>
-                    <a onclick="jump('#projects')" class="btn btn-circle hero-animate hero-animate-delay-2"><i class="fa fa-angle-double-down animated"></i></a>
+                    <a onclick="jump('#projects')" class="btn btn-circle hero-animate hero-animate-delay-2" aria-label="Scroll to projects"><i class="fa fa-angle-double-down animated"></i></a>
                 </div>
             </div>
         </div>
@@ -234,12 +241,12 @@
         </div>
 
         <!-- Chevron to about section -->
-        <a onclick="jump('#about')" class="btn btn-circle projects-chevron"><i class="fa fa-angle-double-down animated"></i></a>
+        <a onclick="jump('#about')" class="btn btn-circle projects-chevron" aria-label="Scroll to about"><i class="fa fa-angle-double-down animated"></i></a>
     </div>
 </section>
-<section class="container content-section about snap-section">
+<section id="about" class="container content-section about snap-section">
     <!-- Carousel -->
-    <div id="about" class="container content-section">
+    <div class="container content-section">
         <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -320,14 +327,14 @@
                                               Second-year graduate student <br/> 
                                               Teaching Assistant [<a
                                                 href="https://www.cs.cmu.edu/~ckingsf/class/15351-f15/" target="_blank">Adv. Data Structures</a>,
-                                                <a href="https://compeau.cbd.cmu.edu/wp-content/uploads/2018/01/syllabus_601.pdf">
+                                                <a href="https://compeau.cbd.cmu.edu/wp-content/uploads/2018/01/syllabus_601.pdf" target="_blank">
                                                   Programming for Scientists</a>]
                                               <br/>
                                               Researcher (Evolution of Cancer -- <a
                                                 href="https://labs.bio.cmu.edu/schwartz/" target="_blank">
                                                 Schwartz Lab</a>)
                                               <br/>
-                                              <a href="https://cmu-dsc.github.io/"
+                                              <a href="https://github.com/cmu-dsc"
                                                  target="_blank">CMU Data Science Club</a><br/>
                                               STEM Ambassador -- <a href="https://www.cmu.edu/gelfand/" target="_blank">Leonard Gelfand Center</a><br/>
                                               Tutor, Computer Sciences<br/>
@@ -337,9 +344,7 @@
 
                                     ==> University of Wisconsin 2015-2019.bib <== <br/>
                                     Founder/President, 
-                                    <a href="https://dotdatascience.org" target="_blank">
-                                      Data Science Club 
-                                    </a> <br/>
+Data Science Club <br/>
 
                                     Executive Board, <a href="https://win.wisc.edu/organization/UGA" target="_blank">
                                       Undergraduate Genetics Association
@@ -356,9 +361,7 @@
                                     <a href="https://morgridge.wisc.edu/students/badger-volunteers/" target="_blank">
                                       Badger Volunteer 
                                     </a> + 
-                                    <a href="https://kb.wisc.edu/vip/page.php?id=21282" target="_blank"> 
-                                      Computer Sciences Tutoring
-                                    </a> <br/>
+                                    Computer Sciences Tutoring <br/>
                                     Computational Research: 3 years<br/>
                                     GPA: 3.6/4<br/>
 
@@ -478,30 +481,6 @@
                     </div>
                 </div>
 
-                <!-- Research -->
-                <!-- <div class="item full-width">
-                  <div class="carousel-caption">
-                    <div class="container">
-                      <div class="row">
-                        <p class="console-navbar">
-                          ┌─<font color="gray">[</font><font color="CACDFF">~/technical</font><font color="gray">]</font>─<font color="gray">[</font><font color="white">anon@wolff.sh</font><font color="gray">]</font>
-                          <font color="red">(ssh) </font><font color="gold">(git master)</font>
-                          <br/> │
-                          <br/> └─<font color="gray">$</font> cd <u>research/</u> && ls -R </p> </p>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-12 col-lg-offset-1 consola">
-                          <div class="container console-text">
-                            <p> color="gray">$</font> ls -d1 <u>*/</u> <span class="tab">
-                                          TODO <br/>
-                                       </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
 
             </div>
             <!-- Carousel -->

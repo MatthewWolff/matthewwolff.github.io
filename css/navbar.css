@@ -1,0 +1,75 @@
+/* === SHARED NAVBAR === */
+
+.navbar-custom {
+    margin-bottom: 0;
+    padding: 20px 0;
+    border-bottom: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: transparent;
+}
+
+.navbar-custom .navbar-toggle {
+    margin-right: 30px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+}
+
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:active {
+    outline: none;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: none;
+}
+
+.navbar-custom a {
+    color: white;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    color: silver;
+    outline: none;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: none;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li.active {
+    outline: none;
+}
+
+.navbar-custom .nav li.active a {
+    background-color: transparent;
+}
+
+.navbar-custom .nav li.active a:hover,
+.dropdown-menu > li > a {
+    color: gray;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    color: green;
+}
+
+.light {
+    font-weight: 400;
+}

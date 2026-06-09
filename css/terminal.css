@@ -1,0 +1,112 @@
+/* === TERMINAL WINDOW CHROME === */
+
+.terminal-titlebar {
+    background-color: #1a1a1a;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #333;
+    position: relative;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.terminal-dots .dot-red { background: #ff5f57; }
+.terminal-dots .dot-yellow { background: #febc2e; }
+.terminal-dots .dot-green { background: #28c840; }
+
+.terminal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.terminal-icon {
+    margin-right: 8px;
+    color: #666;
+    font-size: 11px;
+}
+
+.terminal-body {
+    background: #111;
+    border-radius: 0 0 8px 8px;
+    padding: 12px 24px 24px;
+}
+
+/* === CONNECTION DOT === */
+
+.connection-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00ef37;
+    margin-left: 10px;
+    vertical-align: middle;
+    animation: dot-pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 4px #00ef37;
+}
+
+@keyframes dot-pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 4px #00ef37; }
+    50% { opacity: 0.4; box-shadow: 0 0 2px #00ef37; }
+}
+
+/* === BLINKING CURSOR === */
+
+.terminal-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1em;
+    background: #00ef37;
+    margin-left: 4px;
+    vertical-align: text-bottom;
+    animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 768px) {
+    .terminal-titlebar {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .terminal-dots {
+        gap: 5px;
+    }
+
+    .terminal-dots span {
+        width: 8px;
+        height: 8px;
+    }
+
+    .terminal-title {
+        font-size: 10px;
+    }
+
+    .terminal-body {
+        padding: 20px 16px 30px;
+    }
+}

@@ -1,9 +1,11 @@
-// jumps around CLEANLY
 function jump(to) {
+  var target = $(to).first();
+  if (target.length === 0) return;
   $('html, body').animate({
-    scrollTop: ($(to).first().offset().top)
+    scrollTop: target.offset().top
   }, 500);
 }
+
 
 // check if they're on mobile or not
 window.mobilecheck = function() {
@@ -46,6 +48,7 @@ if(window.mobilecheck()) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting && !hasPlayed) {
         hasPlayed = true;
+        observer.disconnect();
         playLoadingAnimation();
       }
     });

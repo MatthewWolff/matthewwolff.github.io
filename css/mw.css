@@ -214,20 +214,6 @@ p {
             padding: 5px 10px;
             height: auto;
       }
-      .terminal-titlebar {
-            margin-left: 10px;
-            margin-right: 10px;
-      }
-      .terminal-dots {
-            gap: 5px;
-      }
-      .dot {
-            width: 8px;
-            height: 8px;
-      }
-      .terminal-title {
-            font-size: 10px;
-      }
 }
 
 a {
@@ -243,94 +229,7 @@ a:focus {
       color: #017fff;
 }
 
-.light {
-      font-weight: 400;
-}
 
-.navbar-custom {
-      margin-bottom: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      text-transform: uppercase;
-      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: black;
-}
-
-.navbar-custom .navbar-toggle {
-      margin-right: 30px;
-      color: black;
-      background-color: rgba(255, 255, 255, 0.2);
-      font-size: 12px;
-}
-
-.navbar-custom .navbar-toggle:focus,
-.navbar-custom .navbar-toggle:active {
-      outline: none;
-}
-
-.navbar-custom .navbar-brand {
-      font-weight: 700;
-}
-
-.navbar-custom .navbar-brand:focus {
-      outline: none;
-}
-
-.navbar-custom a {
-      color: white;
-}
-
-.navbar-custom .nav li a {
-      -webkit-transition: background 0.3s ease-in-out;
-      -moz-transition: background 0.3s ease-in-out;
-      transition: background 0.3s ease-in-out;
-}
-
-.navbar-custom .nav li a:hover {
-      color: silver;
-      outline: none;
-      background-color: transparent;
-}
-
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li a:active {
-      outline: none;
-      background-color: transparent;
-}
-
-.navbar-custom .nav li.active {
-      outline: none;
-}
-
-.navbar-custom .nav li.active a {
-      background-color: transparent;
-}
-
-.navbar-custom .nav li.active a:hover,
-.dropdown-menu > li > a {
-      color: gray;
-}
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-   color: green;
-}
-
-@media (min-width: 768px) {
-      .navbar-custom {
-            padding: 20px 0;
-            border-bottom: none;
-            letter-spacing: 1px;
-            background: transparent;
-            -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-            -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-            transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-      }
-      .navbar-custom.top-nav-collapse {
-            padding: 0;
-            background: black;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      }
-}
 
 .intro {
       display: table;
@@ -550,7 +449,7 @@ h6 {
 /* === SNAP SCROLL === */
 @media (min-width: 769px) {
       html {
-            scroll-snap-type: y mandatory;
+            scroll-snap-type: y proximity;
             overflow-y: scroll;
       }
 
@@ -585,6 +484,11 @@ h6 {
       max-width: 900px;
       margin: 0 auto;
       text-align: center;
+}
+
+.about .terminal-titlebar {
+      margin-left: 50px;
+      margin-right: 50px;
 }
 
 .projects-section .terminal-titlebar {
@@ -870,81 +774,7 @@ h6 {
       }
 }
 
-/* === TERMINAL ANIMATIONS === */
-.terminal-cursor {
-      display: inline-block;
-      width: 8px;
-      height: 1em;
-      background: #00ef37;
-      margin-left: 4px;
-      vertical-align: text-bottom;
-      animation: cursor-blink 1s step-end infinite;
-}
 
-@keyframes cursor-blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-}
-
-.terminal-titlebar {
-      margin-left: 50px;
-      margin-right: 50px;
-      background-color: #1a1a1a;
-      border-radius: 8px 8px 0 0;
-      border-bottom: 1px solid #333;
-      position: relative;
-      padding: 8px 14px;
-}
-
-.terminal-dots {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      gap: 6px;
-}
-
-.dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      opacity: 0.7;
-}
-
-.dot-red { background: #ff5f57; }
-.dot-yellow { background: #febc2e; }
-.dot-green { background: #28c840; }
-
-.terminal-title {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-      font-size: 13px;
-      color: #999;
-      text-align: center;
-}
-
-.terminal-icon {
-      margin-right: 8px;
-      color: #666;
-      font-size: 11px;
-}
-
-.connection-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #00ef37;
-      margin-left: 10px;
-      vertical-align: middle;
-      animation: dot-pulse 2s ease-in-out infinite;
-      box-shadow: 0 0 4px #00ef37;
-}
-
-@keyframes dot-pulse {
-      0%, 100% { opacity: 1; box-shadow: 0 0 4px #00ef37; }
-      50% { opacity: 0.4; box-shadow: 0 0 2px #00ef37; }
-}
 
 /* === HERO ENTRANCE ANIMATION === */
 .hero-animate {
